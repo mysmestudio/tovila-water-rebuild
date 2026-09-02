@@ -182,15 +182,16 @@
 .up.in{opacity:1;transform:none}
 .up.d1{transition-delay:.09s}.up.d2{transition-delay:.18s}.up.d3{transition-delay:.27s}.up.d4{transition-delay:.36s}
 
-/* ------------------------ water cursor blob ------------------------ */
-#water-cursor{
-  position:fixed;top:0;left:0;width:26px;height:26px;border-radius:50%;z-index:200;
-  pointer-events:none;opacity:0;
-  background:radial-gradient(circle at 35% 30%,rgba(255,255,255,.9),rgba(40,182,232,.55) 45%,rgba(10,111,156,.25) 70%,transparent 72%);
-  box-shadow:0 0 22px rgba(40,182,232,.55);
-  transition:opacity .3s, width .3s, height .3s;
+/* --------------------- pointer ripple rings ------------------------ */
+.wripple{
+  position:fixed;z-index:190;pointer-events:none;border-radius:50%;
+  border:1.5px solid rgba(199,58,76,.65);
+  box-shadow:0 0 18px rgba(199,58,76,.25) inset;
+  transform:translate(-50%,-50%) scale(.2);opacity:.9;
+  animation:wripple .9s cubic-bezier(.2,.7,.2,1) forwards;
 }
-@media (hover:none){#water-cursor{display:none}}
+.wripple.cool{border-color:rgba(40,182,232,.7);box-shadow:0 0 18px rgba(40,182,232,.3) inset}
+@keyframes wripple{to{transform:translate(-50%,-50%) scale(1);opacity:0}}
 
 /* --------------------------- error / 404 --------------------------- */
 .err{position:relative;min-height:80vh;display:grid;place-items:center;background:#04101f;color:#fff;overflow:hidden}
@@ -208,7 +209,7 @@
   .mega .liquid{animation:none;background:none;-webkit-text-fill-color:#7fd8ff;color:#7fd8ff}
   .up{opacity:1;transform:none;transition:none}
   .ticker .track,.media .caustic,.scroll-cue i::after,.kicker::before{animation:none}
-  #water-cursor,#ripple-canvas{display:none}
+  #ripple-canvas{display:none}.wripple{display:none}
   .wcard .fill{transition:none}
 }
 
@@ -224,3 +225,125 @@
 
 .stats-x.three{grid-template-columns:repeat(3,minmax(0,1fr))}
 @media (max-width:640px){.stats-x.three{grid-template-columns:1fr}}
+
+/* =========================================================
+   ROUND 2 — hero slider, red/white carousel, water process
+   ========================================================= */
+
+/* ---------------------- hero image slider ---------------------- */
+.hero-x .hero-media img{
+  position:absolute;inset:0;opacity:0;
+  transition:opacity 1.6s ease, transform 9s linear;
+}
+.hero-x .hero-media img.on{opacity:1;transform:scale(1.14)}
+.hero-dots{
+  position:absolute;right:clamp(1rem,4vw,3rem);bottom:1.6rem;z-index:4;
+  display:flex;gap:.55rem;
+}
+.hero-dots button{
+  width:34px;height:3px;border:0;padding:0;cursor:pointer;border-radius:2px;
+  background:rgba(255,255,255,.3);position:relative;overflow:hidden;
+}
+.hero-dots button[aria-current="true"]{background:rgba(255,255,255,.35)}
+.hero-dots button[aria-current="true"]::after{
+  content:"";position:absolute;inset:0;background:var(--red-bright);
+  transform-origin:left;animation:dotfill 6s linear forwards;
+}
+@keyframes dotfill{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+
+/* ------------------- start-here carousel (white/red) ------------------- */
+.carousel{position:relative;margin-top:2.2rem}
+.carousel .rail-wrap{overflow:hidden;border-radius:22px}
+.carousel .track2{
+  display:flex;gap:1.1rem;padding:.4rem;scroll-snap-type:x mandatory;
+  overflow-x:auto;scroll-behavior:smooth;scrollbar-width:none;
+}
+.carousel .track2::-webkit-scrollbar{display:none}
+.ccard{
+  position:relative;isolation:isolate;overflow:hidden;flex:0 0 clamp(250px,30%,340px);
+  scroll-snap-align:start;display:flex;flex-direction:column;justify-content:space-between;
+  min-height:280px;padding:1.5rem;border-radius:20px;text-decoration:none;
+  background:#fff;color:var(--ink);border:1px solid var(--line-light);
+  box-shadow:0 18px 40px -30px rgba(8,18,38,.5);
+  transition:transform .5s cubic-bezier(.2,.8,.2,1),box-shadow .5s,border-color .4s;
+}
+.ccard:hover,.ccard:focus-visible{transform:translateY(-8px);border-color:rgba(156,34,54,.35);box-shadow:0 30px 60px -32px rgba(156,34,54,.45)}
+.ccard .num{font-family:var(--mono);font-size:.6rem;letter-spacing:.2em;color:var(--brand-red)}
+.ccard h3{font-size:1.24rem;margin:.5rem 0 .5rem;color:var(--ink)}
+.ccard .body{margin-top:auto}
+.ccard p{font-size:.92rem;color:#5a6b80;margin:0}
+.ccard .go{margin-top:1rem;font-family:var(--mono);font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--brand-red)}
+/* waves flowing through the cards */
+.ccard .waveset{position:absolute;left:0;right:0;bottom:0;height:120px;z-index:-1;overflow:hidden;opacity:.9}
+.ccard .waveset span{
+  position:absolute;bottom:-30px;left:0;width:280%;height:120px;
+  background:radial-gradient(60% 100% at 50% 100%,rgba(156,34,54,.16),transparent 70%);
+  border-radius:44% 56% 0 0/60% 60% 0 0;
+  animation:wroll 9s linear infinite;
+}
+.ccard .waveset span:nth-child(2){background:radial-gradient(60% 100% at 50% 100%,rgba(199,58,76,.14),transparent 70%);animation-duration:13s;animation-direction:reverse;bottom:-46px}
+.ccard .waveset span:nth-child(3){background:radial-gradient(60% 100% at 50% 100%,rgba(8,18,38,.07),transparent 70%);animation-duration:17s;bottom:-62px}
+@keyframes wroll{to{transform:translateX(-64%)}}
+.ccard:hover .waveset span{animation-duration:4.5s}
+.ccard:hover .waveset{opacity:1;height:100%}
+.ccard .waveset{transition:height .7s cubic-bezier(.3,.9,.2,1),opacity .5s}
+
+.cnav{display:flex;gap:.6rem;margin-top:1.3rem;align-items:center}
+.cnav button{
+  width:46px;height:46px;border-radius:50%;border:1px solid var(--line-light);background:#fff;
+  cursor:pointer;color:var(--brand-red);font-size:1.05rem;display:grid;place-items:center;
+  transition:background .3s,color .3s,transform .3s,border-color .3s;
+}
+.cnav button:hover{background:var(--brand-red);color:#fff;border-color:var(--brand-red);transform:translateY(-2px)}
+.cnav .cbar{flex:1;height:2px;background:var(--line-light);position:relative;border-radius:2px;overflow:hidden}
+.cnav .cbar i{position:absolute;inset:0 auto 0 0;width:30%;background:var(--brand-red);border-radius:2px;transition:transform .35s ease,width .35s ease}
+
+/* ---------------- industrial section on white ---------------- */
+.section.light-x{background:#fff}
+.section.light-x .kicker{color:var(--brand-red)}
+.section.light-x .stats-x{background:var(--line-light)}
+.section.light-x .stats-x .s{background:#fff}
+.section.light-x .stats-x .s .n{color:var(--ink)}
+.section.light-x .stats-x .s .l{color:#5a6b80}
+.section.light-x .btn-liquid.ghost-x{border-color:rgba(8,18,38,.25);color:var(--ink)}
+.section.light-x .btn-liquid.ghost-x:hover{color:#fff}
+
+/* ------------------- water-themed process flow ------------------- */
+.flow{position:relative;margin-top:2.8rem;border-radius:24px;overflow:hidden;background:linear-gradient(180deg,#f4fbff,#fff);border:1px solid var(--line-light)}
+.flow .pipe{position:absolute;left:0;right:0;top:74px;height:8px;background:rgba(8,18,38,.07);border-radius:99px;overflow:hidden}
+.flow .pipe i{position:absolute;inset:0;width:0;background:linear-gradient(90deg,var(--aqua-deep),var(--aqua) 60%,#7fd8ff);transition:width 1.6s cubic-bezier(.3,.9,.2,1)}
+.flow.in .pipe i{width:100%}
+.flow .pipe::after{
+  content:"";position:absolute;inset:0;
+  background:repeating-linear-gradient(90deg,rgba(255,255,255,.55) 0 8px,transparent 8px 26px);
+  animation:pipeflow 1.6s linear infinite;
+}
+@keyframes pipeflow{to{transform:translateX(-26px)}}
+.flow .steps{position:relative;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0}
+.flow .fstep{padding:2.6rem 1.5rem 2.2rem;border-right:1px solid var(--line-light);position:relative;background:transparent;transition:background .5s}
+.flow .fstep:last-child{border-right:0}
+.flow .fstep:hover{background:rgba(40,182,232,.06)}
+.flow .drop{
+  position:relative;width:52px;height:52px;margin-bottom:1.1rem;display:grid;place-items:center;
+  border-radius:50% 50% 50% 50%/60% 60% 40% 40%;background:#fff;border:2px solid var(--aqua);
+  font-family:var(--mono);font-size:.78rem;color:var(--aqua-deep);
+  transform:rotate(45deg);
+}
+.flow .drop span{transform:rotate(-45deg);display:block}
+.flow .fstep:hover .drop{background:var(--aqua);color:#fff;border-color:var(--aqua-deep);animation:bob 1.6s ease-in-out infinite}
+@keyframes bob{50%{transform:rotate(45deg) translateY(-6px)}}
+.flow .fstep h3{font-size:1.08rem;margin:0 0 .35rem}
+.flow .fstep p{font-size:.92rem;color:#4a5d73;margin:0}
+.flow .fstep .lvl{position:absolute;left:0;right:0;bottom:0;height:0;background:linear-gradient(180deg,rgba(40,182,232,.18),rgba(40,182,232,.32));z-index:-1;transition:height .7s cubic-bezier(.3,.9,.2,1)}
+.flow .fstep:hover .lvl{height:100%}
+@media (max-width:820px){
+  .flow .steps{grid-template-columns:1fr}
+  .flow .fstep{border-right:0;border-bottom:1px solid var(--line-light)}
+  .flow .pipe{display:none}
+}
+
+@media (prefers-reduced-motion:reduce){
+  .hero-x .hero-media img{transition:none}
+  .ccard .waveset span,.flow .pipe::after,.hero-dots button[aria-current="true"]::after{animation:none}
+  .flow .pipe i{transition:none;width:100%}
+}
