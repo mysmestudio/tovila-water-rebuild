@@ -11,8 +11,8 @@
   --brand-red:#9c2236;
   --red-2:#7c1a2a;
   --red-bright:#c73a4c;
-  --pale:#f2f3ee;
-  --paper:#faf9f5;
+  --pale:#f4f8fb;
+  --paper:#ffffff;
   --mist:#6e859c;
   --line-light:rgba(8,18,38,0.12);
   --home-tint:#4f9fc9;
@@ -65,7 +65,7 @@ section{position:relative}
 .lead{font-size:1.1rem;color:#33465f;max-width:62ch}
 .center{text-align:center}
 .center .lead{margin-inline:auto}
-.dark{background:var(--ink);color:var(--pale)}
+.dark{background:var(--ink);color:#e6eef6}
 .dark .lead{color:#b9c7d6}
 .dark h1,.dark h2,.dark h3{color:#fff}
 .deep{background:var(--deep-blue);color:#eaf2f8}
