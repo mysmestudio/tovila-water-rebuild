@@ -211,3 +211,13 @@
   #water-cursor,#ripple-canvas{display:none}
   .wcard .fill{transition:none}
 }
+
+/* --------- reconciling shared .step / anchor styles in new layout --------- */
+.rail .step{border-top:0}
+.dark .rail .step p{color:#b8cbdc}
+.dark .rail .step b{background:rgba(255,255,255,.06);color:#8fd6f5}
+.dark .rail::before{background:linear-gradient(90deg,var(--aqua),rgba(40,182,232,.1))}
+.anchor-big .n,.anchor-small .n{display:block}
+.dark .anchor-block{border:1px solid rgba(255,255,255,.14);border-radius:20px;padding:1.6rem}
+.dark .anchor-small .n{color:#fff}
+.section.pale{background:#f4f8fb}
