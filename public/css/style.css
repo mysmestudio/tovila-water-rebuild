@@ -24,6 +24,7 @@
   --max:1200px;
   --pad:clamp(1.1rem,4vw,2.5rem);
   --r:14px;
+  --waveh:clamp(38px,5vw,70px);
 }
 
 *{box-sizing:border-box}
@@ -158,7 +159,11 @@ textarea:focus-visible,[tabindex]:focus-visible,summary:focus-visible{
 }
 
 /* ------------------------------ waves ------------------------------- */
-.wave{display:block;width:100%;height:clamp(38px,5vw,70px)}
+.wave{
+  display:block;width:100%;height:var(--waveh);
+  position:relative;z-index:1;
+  margin-top:calc(-1 * var(--waveh));margin-bottom:-1px;pointer-events:none;
+}
 .wave-flip{transform:rotate(180deg)}
 
 /* ------------------------------ hero -------------------------------- */
