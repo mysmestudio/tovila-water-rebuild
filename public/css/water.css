@@ -347,3 +347,83 @@
   .ccard .waveset span,.flow .pipe::after,.hero-dots button[aria-current="true"]::after{animation:none}
   .flow .pipe i{transition:none;width:100%}
 }
+
+/* =========================================================
+   ROUND 3 — inner pages get the homepage design language
+   ========================================================= */
+
+/* ------------------- image banner (inner pages) ------------------- */
+.banner-x{
+  position:relative;overflow:hidden;isolation:isolate;color:#fff;
+  min-height:clamp(380px,52vh,560px);display:flex;align-items:flex-end;
+  padding:clamp(4.5rem,9vw,7rem) 0 clamp(2.5rem,5vw,4rem);
+  background:var(--ink);
+}
+.banner-x .bmedia{position:absolute;inset:0;z-index:-2;overflow:hidden}
+.banner-x .bmedia img{width:100%;height:100%;object-fit:cover;transform:scale(1.06)}
+.banner-x .bmedia::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(90deg,rgba(5,9,15,.94) 0%,rgba(8,18,38,.78) 45%,rgba(8,18,38,.35) 100%),
+             linear-gradient(0deg,rgba(5,9,15,.85),transparent 62%);
+}
+.banner-x canvas{position:absolute;inset:0;z-index:-1;width:100%;height:100%;pointer-events:none}
+.banner-x .wrap{position:relative;z-index:1;width:100%}
+.banner-x .kicker{color:#8fd6f5}
+.banner-x.red .kicker{color:#ff8c9e}
+.banner-x h1{
+  font-family:var(--display);font-weight:700;line-height:.98;letter-spacing:-.02em;color:#fff;
+  font-size:clamp(2.3rem,5.6vw,4.6rem);margin:.7rem 0 1rem;max-width:20ch;
+}
+.banner-x h1 em{font-style:normal;background:linear-gradient(100deg,#8fd6f5,#28b6e8 45%,#bfe9ff);
+  -webkit-background-clip:text;background-clip:text;color:transparent}
+.banner-x.red h1 em{background:linear-gradient(100deg,#ff9aa8,#c73a4c 55%,#ffd0d6);-webkit-background-clip:text;background-clip:text;color:transparent}
+.banner-x .lead{color:rgba(255,255,255,.82);max-width:62ch;font-size:1.03rem}
+.banner-x .bstats{display:flex;flex-wrap:wrap;gap:1.6rem 2.6rem;margin-top:1.8rem}
+.banner-x .bstats div{border-left:2px solid rgba(255,255,255,.24);padding-left:.9rem}
+.banner-x .bstats .n{display:block;font-family:var(--display);font-size:1.5rem}
+.banner-x .bstats .l{font-family:var(--mono);font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.6)}
+@media (max-width:640px){.banner-x{min-height:auto;padding-top:6rem}}
+
+/* --------------- cards on inner pages: white + water ------------- */
+.card{
+  position:relative;isolation:isolate;overflow:hidden;background:#fff;
+  border-radius:18px;
+  transition:transform .5s cubic-bezier(.2,.8,.2,1),box-shadow .5s,border-color .4s;
+}
+.card::after{
+  content:"";position:absolute;left:-20%;right:-20%;bottom:-70%;height:150%;z-index:-1;
+  border-radius:45% 55% 0 0/60% 60% 0 0;
+  background:radial-gradient(60% 100% at 50% 100%,rgba(40,182,232,.16),transparent 72%);
+  transform:translateY(60%);transition:transform .75s cubic-bezier(.3,.9,.2,1);
+}
+.card:hover{transform:translateY(-6px);box-shadow:0 28px 55px -34px rgba(8,18,38,.5)}
+.card:hover::after{transform:translateY(0)}
+.card.a-training::after,.card.a-csr::after{background:radial-gradient(60% 100% at 50% 100%,rgba(199,58,76,.16),transparent 72%)}
+.card .icon{color:var(--brand-red)}
+
+/* section headings on inner pages */
+main h2{font-family:var(--display);letter-spacing:-.015em}
+.section > .wrap > h2{font-size:clamp(1.7rem,3.3vw,2.7rem)}
+
+/* buttons: use the liquid style everywhere */
+.btn{position:relative;overflow:hidden;isolation:isolate}
+.btn::after{
+  content:"";position:absolute;inset:0;z-index:-1;border-radius:inherit;
+  background:radial-gradient(circle at var(--lx,50%) var(--ly,50%),rgba(255,255,255,.28),transparent 60%);
+  opacity:0;transition:opacity .4s;
+}
+.btn:hover::after{opacity:1}
+
+/* pale sections stay cool-white, never brownish */
+.section.pale{background:#f4f8fb}
+
+@media (prefers-reduced-motion:reduce){
+  .card,.card::after{transition:none}
+}
+
+/* training pathway diagram: scroll instead of overflow on small screens */
+@media (max-width:820px){
+  .steps{overflow-x:auto;scrollbar-width:none}
+  .steps::-webkit-scrollbar{display:none}
+  .steps > .step{min-width:150px}
+}

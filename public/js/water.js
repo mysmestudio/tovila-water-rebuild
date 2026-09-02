@@ -283,4 +283,8 @@
 
   waterCanvas(document.getElementById('ripple-canvas'), { host: document.querySelector('.hero-x') });
   waterCanvas(document.getElementById('err-canvas'), { host: document.querySelector('.err') });
+  /* inner-page banners */
+  document.querySelectorAll('canvas.wcanvas').forEach(function (c) {
+    waterCanvas(c, { host: c.parentElement });
+  });
 })();
