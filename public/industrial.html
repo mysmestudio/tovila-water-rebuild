@@ -15,6 +15,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/water.css">
 </head>
 <body>
   <div id="scroll-progress" aria-hidden="true"></div>
@@ -56,13 +57,15 @@
     </nav>
   </div>
   <main>
-    <section class="banner industrial">
+    <section class="banner-x">
+      <div class="bmedia"><img src="img/industrial-plant.jpg" width="1440" height="960" alt="Operator walking the gantry of an industrial water treatment plant"></div>
+      <canvas class="wcanvas" aria-hidden="true"></canvas>
       <div class="wrap">
-        <span class="eyebrow on-dark">Industrial &amp; Institutional</span>
+        <span class="kicker on-dark">Industrial &amp; Institutional</span>
         <h1>Engineered Water for Complex Applications.</h1>
         <p class="lead">Feed water chemistry, load profile, recovery targets, discharge limits, control philosophy and lifecycle cost. We specify to the process, document the basis of design and stand behind commissioning data.</p>
       </div>
-    </section>
+        </section>
     <svg class="wave " viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true" focusable="false">
     <path d="M0,40 C240,90 480,-10 720,30 C960,70 1200,10 1440,45 L1440,80 L0,80 Z" fill="#ffffff"/>
   </svg>
@@ -186,5 +189,6 @@
     </div>
   </footer>
   <script src="js/main.js"></script>
+  <script src="js/water.js" defer></script>
 </body>
 </html>
