@@ -1,24 +1,43 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
+// The Tovila site is plain static HTML/CSS/JS in /public (index.html and siblings).
+// This route only forwards "/" to the static home page; it contains no app logic.
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "Tovila Water Solutions | Water Treatment & Engineering in Accra, Ghana" },
+      {
+        name: "description",
+        content:
+          "Water treatment, purification and water engineering for homes, businesses, industry and institutions in Ghana. Request a free water assessment.",
+      },
+      {
+        property: "og:title",
+        content: "Tovila Water Solutions | Water Treatment & Engineering in Ghana",
+      },
+      {
+        property: "og:description",
+        content:
+          "Complete water treatment, purification and water engineering solutions designed around your water source, application and budget.",
+      },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
+    <div style={{ fontFamily: "system-ui, sans-serif", padding: "2rem" }}>
+      <script
+        dangerouslySetInnerHTML={{
+          __html: 'window.location.replace("/index.html");',
+        }}
       />
+      <noscript>
+        <a href="/index.html">Continue to Tovila Water Solutions</a>
+      </noscript>
     </div>
   );
 }
