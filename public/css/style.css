@@ -102,6 +102,8 @@ section{position:relative}
   font-family:var(--body);
 }
 .nav-links a:hover,.nav-links button.drop-toggle:hover{background:rgba(8,18,38,.06)}
+.nav-links a.btn{background:var(--brand-red);color:#fff}
+.nav-links a.btn:hover{background:var(--brand-red)}
 .nav-links a[aria-current="page"]{color:var(--brand-red)}
 .drop{position:relative}
 .drop-toggle::after{content:"▾";margin-left:.35rem;font-size:.7rem;color:var(--mist)}
