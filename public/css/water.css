@@ -182,15 +182,16 @@
 .up.in{opacity:1;transform:none}
 .up.d1{transition-delay:.09s}.up.d2{transition-delay:.18s}.up.d3{transition-delay:.27s}.up.d4{transition-delay:.36s}
 
-/* ------------------------ water cursor blob ------------------------ */
-#water-cursor{
-  position:fixed;top:0;left:0;width:26px;height:26px;border-radius:50%;z-index:200;
-  pointer-events:none;opacity:0;
-  background:radial-gradient(circle at 35% 30%,rgba(255,255,255,.9),rgba(40,182,232,.55) 45%,rgba(10,111,156,.25) 70%,transparent 72%);
-  box-shadow:0 0 22px rgba(40,182,232,.55);
-  transition:opacity .3s, width .3s, height .3s;
+/* --------------------- pointer ripple rings ------------------------ */
+.wripple{
+  position:fixed;z-index:190;pointer-events:none;border-radius:50%;
+  border:1.5px solid rgba(199,58,76,.65);
+  box-shadow:0 0 18px rgba(199,58,76,.25) inset;
+  transform:translate(-50%,-50%) scale(.2);opacity:.9;
+  animation:wripple .9s cubic-bezier(.2,.7,.2,1) forwards;
 }
-@media (hover:none){#water-cursor{display:none}}
+.wripple.cool{border-color:rgba(40,182,232,.7);box-shadow:0 0 18px rgba(40,182,232,.3) inset}
+@keyframes wripple{to{transform:translate(-50%,-50%) scale(1);opacity:0}}
 
 /* --------------------------- error / 404 --------------------------- */
 .err{position:relative;min-height:80vh;display:grid;place-items:center;background:#04101f;color:#fff;overflow:hidden}
@@ -208,7 +209,7 @@
   .mega .liquid{animation:none;background:none;-webkit-text-fill-color:#7fd8ff;color:#7fd8ff}
   .up{opacity:1;transform:none;transition:none}
   .ticker .track,.media .caustic,.scroll-cue i::after,.kicker::before{animation:none}
-  #water-cursor,#ripple-canvas{display:none}
+  #ripple-canvas{display:none}.wripple{display:none}
   .wcard .fill{transition:none}
 }
 
