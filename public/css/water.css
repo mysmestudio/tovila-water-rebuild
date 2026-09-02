@@ -420,3 +420,10 @@ main h2{font-family:var(--display);letter-spacing:-.015em}
 @media (prefers-reduced-motion:reduce){
   .card,.card::after{transition:none}
 }
+
+/* training pathway diagram: scroll instead of overflow on small screens */
+@media (max-width:820px){
+  .steps{overflow-x:auto;scrollbar-width:none}
+  .steps::-webkit-scrollbar{display:none}
+  .steps > .step{min-width:150px}
+}
