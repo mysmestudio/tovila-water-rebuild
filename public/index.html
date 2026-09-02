@@ -62,8 +62,11 @@
 
     <!-- ============================ HERO ============================ -->
     <section class="hero-x">
-      <div class="hero-media">
-        <img src="img/hero-engineers.jpg" width="1920" height="1280" alt="Two Ghanaian water treatment engineers inspecting a stainless steel reverse osmosis skid inside a water plant">
+      <div class="hero-media" id="hero-slides">
+        <img class="on" src="img/hero-engineers.jpg" width="1920" height="1280" alt="Two Ghanaian water treatment engineers inspecting a stainless steel reverse osmosis skid inside a water plant">
+        <img src="img/industrial-plant.jpg" loading="lazy" width="1440" height="960" alt="Plant operator walking the gantry of an industrial water treatment plant">
+        <img src="img/training-academy.jpg" loading="lazy" width="1280" height="960" alt="Apprentice technicians training on a reverse osmosis rig">
+        <img src="img/community-borehole.jpg" loading="lazy" width="1280" height="960" alt="Community members collecting clean water from a borehole standpipe">
       </div>
       <canvas id="ripple-canvas" aria-hidden="true"></canvas>
       <div class="wrap">
@@ -84,6 +87,7 @@
           </div>
         </div>
       </div>
+      <div class="hero-dots" id="hero-dots" role="tablist" aria-label="Hero images"></div>
       <span class="scroll-cue" aria-hidden="true">Scroll<i></i></span>
     </section>
 
@@ -101,12 +105,21 @@
         <span class="kicker" style="color:var(--brand-red)">Start here</span>
         <h2 class="mega" style="font-size:clamp(2rem,4.4vw,3.6rem);margin-top:.8rem">What water challenge are you facing?</h2>
         <p class="lead">Pick the one closest to your situation. Your choice is carried forward, so no form ever starts from zero.</p>
-        <div class="deck">
-          <a class="wcard up" href="residential.html" data-entry="residential"><span class="fill" aria-hidden="true"></span><span class="num">01</span><h3>My home needs better water</h3><p>Sediment, hard water, taste or safety on borehole, municipal or stored supply.</p><span class="go">Continue &rarr;</span></a>
-          <a class="wcard up d1" href="commercial.html" data-entry="commercial"><span class="fill" aria-hidden="true"></span><span class="num">02</span><h3>My business cannot lose water</h3><p>Hotels, restaurants, offices, estates, schools and clinics with zero tolerance for downtime.</p><span class="go">Continue &rarr;</span></a>
-          <a class="wcard up d2" href="industrial.html" data-entry="industrial"><span class="fill" aria-hidden="true"></span><span class="num">03</span><h3>I need an industrial system</h3><p>Process water, industrial RO, treatment plants, wastewater, reuse and automation.</p><span class="go">Continue &rarr;</span></a>
-          <a class="wcard up d3" href="services.html" data-entry="services"><span class="fill" aria-hidden="true"></span><span class="num">04</span><h3>My system is letting me down</h3><p>Falling output, failing media, weak pressure or a plant nobody has serviced in years.</p><span class="go">Continue &rarr;</span></a>
-          <a class="wcard up d4" href="training.html" data-entry="training"><span class="fill" aria-hidden="true"></span><span class="num">05</span><h3>I want to learn water engineering</h3><p>Apprenticeship, online courses and hands-on RO training at the Tovila Academy.</p><span class="go">Continue &rarr;</span></a>
+        <div class="carousel" id="challenge-carousel">
+          <div class="rail-wrap">
+            <div class="track2" id="challenge-track">
+            <a class="ccard" href="residential.html" data-entry="residential"><span class="waveset" aria-hidden="true"><span></span><span></span><span></span></span><span class="num">01</span><h3>My home needs better water</h3><p>Sediment, hard water, taste or safety on borehole, municipal or stored supply.</p><span class="go">Continue &rarr;</span></a>
+            <a class="ccard" href="commercial.html" data-entry="commercial"><span class="waveset" aria-hidden="true"><span></span><span></span><span></span></span><span class="num">02</span><h3>My business cannot lose water</h3><p>Hotels, restaurants, offices, estates, schools and clinics with zero tolerance for downtime.</p><span class="go">Continue &rarr;</span></a>
+            <a class="ccard" href="industrial.html" data-entry="industrial"><span class="waveset" aria-hidden="true"><span></span><span></span><span></span></span><span class="num">03</span><h3>I need an industrial system</h3><p>Process water, industrial RO, treatment plants, wastewater, reuse and automation.</p><span class="go">Continue &rarr;</span></a>
+            <a class="ccard" href="services.html" data-entry="services"><span class="waveset" aria-hidden="true"><span></span><span></span><span></span></span><span class="num">04</span><h3>My system is letting me down</h3><p>Falling output, failing media, weak pressure or a plant nobody has serviced in years.</p><span class="go">Continue &rarr;</span></a>
+            <a class="ccard" href="training.html" data-entry="training"><span class="waveset" aria-hidden="true"><span></span><span></span><span></span></span><span class="num">05</span><h3>I want to learn water engineering</h3><p>Apprenticeship, online courses and hands-on RO training at the Tovila Academy.</p><span class="go">Continue &rarr;</span></a>
+            </div>
+          </div>
+          <div class="cnav">
+            <button type="button" data-dir="-1" aria-label="Previous challenge">&larr;</button>
+            <button type="button" data-dir="1" aria-label="Next challenge">&rarr;</button>
+            <span class="cbar" aria-hidden="true"><i></i></span>
+          </div>
         </div>
       </div>
     </section>
@@ -129,7 +142,7 @@
     </section>
 
     <!-- ========================== INDUSTRIAL ======================== -->
-    <section class="section dark">
+    <section class="section light-x">
       <div class="wrap duo flip">
         <div class="media up">
           <img src="img/industrial-plant.jpg" loading="lazy" width="1440" height="960" alt="Plant operator in high-visibility vest walking the gantry of an industrial water treatment plant at sunset">
@@ -137,7 +150,7 @@
           <span class="cap">Process water &middot; industrial RO &middot; wastewater &amp; reuse</span>
         </div>
         <div class="up d1">
-          <span class="kicker" style="color:#8fd6f5">Industrial &amp; institutional</span>
+          <span class="kicker" style="color:var(--brand-red)">Industrial &amp; institutional</span>
           <h2 style="margin-top:.9rem">Plant-grade water, engineered to a spec.</h2>
           <p class="lead">Process water, industrial reverse osmosis, treatment plants, effluent handling and reuse &mdash; designed, installed, commissioned and maintained by one team.</p>
           <div class="stats-x three" style="margin:1.6rem 0 1.8rem">
@@ -150,16 +163,37 @@
       </div>
     </section>
 
+    <!-- =========================== TRAINING ========================= -->
+    <section class="section dark">
+      <div class="wrap duo flip">
+        <div class="media up">
+          <img src="img/training-academy.jpg" loading="lazy" width="1280" height="960" alt="Instructor teaching young Ghanaian apprentice technicians on a reverse osmosis training rig">
+          <span class="caustic" aria-hidden="true"></span>
+          <span class="cap">Lesson 1 free to watch &middot; no signup</span>
+        </div>
+        <div class="up d1">
+          <span class="kicker" style="color:#8fd6f5">Tovila Water Engineering Academy</span>
+          <h2 style="margin-top:.9rem">Learn. Practise. Engineer.</h2>
+          <p class="lead">Ghana needs more competent water technicians than it has. We train them the way the work actually happens &mdash; on real systems, with real faults.</p>
+          <div class="btn-row-x"><a class="btn-liquid ghost-x" href="training.html" data-entry="training"><span>Explore the Academy</span><span class="arw" aria-hidden="true">&rarr;</span></a></div>
+        </div>
+      </div>
+    </section>
+
     <!-- =========================== PROCESS ========================== -->
     <section class="section">
       <div class="wrap">
         <span class="kicker" style="color:var(--brand-red)">How we work</span>
-        <h2 style="margin-top:.9rem">Four steps, no guesswork.</h2>
-        <div class="rail">
-          <div class="step up"><b>01</b><h3>Read the water</h3><p>Sampling and analysis of your actual source before anything is quoted.</p></div>
-          <div class="step up d1"><b>02</b><h3>Engineer the design</h3><p>Media, membranes, capacity and controls sized to your load and budget.</p></div>
-          <div class="step up d2"><b>03</b><h3>Install &amp; commission</h3><p>Our own trained technicians, handover with performance figures.</p></div>
-          <div class="step up d3"><b>04</b><h3>Keep it performing</h3><p>Planned service, media changes and rehabilitation before failure.</p></div>
+        <h2 style="margin-top:.9rem">Four steps, and the water moves through all of them.</h2>
+        <p class="lead">Follow the pipe: every stage feeds the next, and nothing is quoted before your source is read.</p>
+        <div class="flow up" id="flow">
+          <span class="pipe" aria-hidden="true"><i></i></span>
+          <div class="steps">
+            <div class="fstep"><span class="lvl" aria-hidden="true"></span><span class="drop"><span>01</span></span><h3>Read the water</h3><p>Sampling and analysis of your actual source before anything is quoted.</p></div>
+            <div class="fstep"><span class="lvl" aria-hidden="true"></span><span class="drop"><span>02</span></span><h3>Engineer the design</h3><p>Media, membranes, capacity and controls sized to your load and budget.</p></div>
+            <div class="fstep"><span class="lvl" aria-hidden="true"></span><span class="drop"><span>03</span></span><h3>Install &amp; commission</h3><p>Our own trained technicians, handover with performance figures.</p></div>
+            <div class="fstep"><span class="lvl" aria-hidden="true"></span><span class="drop"><span>04</span></span><h3>Keep it performing</h3><p>Planned service, media changes and rehabilitation before failure.</p></div>
+          </div>
         </div>
       </div>
     </section>
@@ -178,23 +212,6 @@
           <p class="lead">Community water points, technician scholarships and school water projects &mdash; the part of our work that is never invoiced.</p>
           <p><span class="flag">Placeholder figures &mdash; verified numbers pending</span></p>
           <div class="btn-row-x"><a class="btn-liquid" href="csr.html"><span>See our CSR work</span><span class="arw" aria-hidden="true">&rarr;</span></a></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- =========================== TRAINING ========================= -->
-    <section class="section dark">
-      <div class="wrap duo flip">
-        <div class="media up">
-          <img src="img/training-academy.jpg" loading="lazy" width="1280" height="960" alt="Instructor teaching young Ghanaian apprentice technicians on a reverse osmosis training rig">
-          <span class="caustic" aria-hidden="true"></span>
-          <span class="cap">Lesson 1 free to watch &middot; no signup</span>
-        </div>
-        <div class="up d1">
-          <span class="kicker" style="color:#8fd6f5">Tovila Water Engineering Academy</span>
-          <h2 style="margin-top:.9rem">Learn. Practise. Engineer.</h2>
-          <p class="lead">Ghana needs more competent water technicians than it has. We train them the way the work actually happens &mdash; on real systems, with real faults.</p>
-          <div class="btn-row-x"><a class="btn-liquid ghost-x" href="training.html" data-entry="training"><span>Explore the Academy</span><span class="arw" aria-hidden="true">&rarr;</span></a></div>
         </div>
       </div>
     </section>
