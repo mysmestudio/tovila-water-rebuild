@@ -249,6 +249,36 @@ section {
 .nav-links a[aria-current="page"] {
   color: var(--brand-red);
 }
+
+/* --------------------------- breadcrumbs --------------------------- */
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 1.1rem;
+}
+.breadcrumb a {
+  color: var(--home-tint);
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+.breadcrumb a:hover {
+  text-decoration: underline;
+  opacity: 0.85;
+}
+.breadcrumb .sep {
+  opacity: 0.45;
+  color: inherit;
+}
+.breadcrumb .curr {
+  color: inherit;
+  opacity: 0.9;
+}
 .drop {
   position: relative;
 }
