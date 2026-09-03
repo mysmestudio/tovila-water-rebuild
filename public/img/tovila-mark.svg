@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%" aria-label="Tovila Water Solutions mark">
+  <defs>
+    <linearGradient id="tvMarkSwirl" x1="12%" y1="12%" x2="88%" y2="88%">
+      <stop offset="0%" stop-color="#0b3879"/>
+      <stop offset="30%" stop-color="#0d4da1"/>
+      <stop offset="65%" stop-color="#1565c0"/>
+      <stop offset="90%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#29b6f6"/>
+    </linearGradient>
+
+    <radialGradient id="tvMarkDrop" cx="40%" cy="38%" r="62%">
+      <stop offset="0%" stop-color="#80d8ff"/>
+      <stop offset="28%" stop-color="#00b0ff"/>
+      <stop offset="70%" stop-color="#0277bd"/>
+      <stop offset="100%" stop-color="#014a87"/>
+    </radialGradient>
+
+    <linearGradient id="tvMarkSplashUpper" x1="5%" y1="95%" x2="95%" y2="5%">
+      <stop offset="0%" stop-color="#1565c0"/>
+      <stop offset="42%" stop-color="#42a5f5"/>
+      <stop offset="82%" stop-color="#90caf9"/>
+      <stop offset="100%" stop-color="#b3e5fc"/>
+    </linearGradient>
+
+    <linearGradient id="tvMarkSplashLower" x1="0%" y1="20%" x2="100%" y2="80%">
+      <stop offset="0%" stop-color="#0b3879"/>
+      <stop offset="50%" stop-color="#1565c0"/>
+      <stop offset="100%" stop-color="#42a5f5"/>
+    </linearGradient>
+  </defs>
+
+  <g id="water-graphic">
+    <path d="M 285 140
+             C 278 120, 236 112, 196 123
+             C 140 139, 94 185, 78 248
+             C 62 314, 80 378, 126 420
+             C 170 460, 238 470, 298 450
+             C 334 438, 362 415, 384 386
+             C 372 391, 353 397, 334 399
+             C 278 405, 216 392, 173 354
+             C 134 319, 118 265, 132 212
+             C 144 164, 184 133, 230 125
+             C 260 119, 282 127, 285 140 Z"
+          fill="url(#tvMarkSwirl)" />
+
+    <path d="M 285 140
+             C 285 140, 271 164, 271 173
+             C 271 180.7, 277.3 186.5, 285 186.5
+             C 292.7 186.5, 299 180.7, 299 173
+             C 299 164, 285 140, 285 140 Z"
+          fill="url(#tvMarkDrop)" />
+
+    <path d="M 276 166
+             C 274 170, 274 176, 277 180
+             C 275 177, 275 172, 277 167
+             C 279 163, 283 155, 283 155
+             C 283 155, 279 161, 276 166 Z"
+          fill="#ffffff" opacity="0.65" />
+
+    <path d="M 310 422
+             C 345 414, 382 374, 408 322
+             C 418 302, 420 286, 412 281
+             C 402 276, 388 288, 375 308
+             C 352 342, 332 374, 294 402
+             C 286 408, 300 424, 310 422 Z"
+          fill="url(#tvMarkSplashUpper)" />
+
+    <path d="M 340 405
+             C 366 402, 404 410, 436 424
+             C 447 429, 448 438, 438 441
+             C 418 447, 384 443, 354 430
+             C 342 424, 331 414, 340 405 Z"
+          fill="url(#tvMarkSplashLower)" />
+  </g>
+</svg>

@@ -6,7 +6,7 @@
     <title>Residential Water Packages in Ghana | Tovila Water Solutions</title>
     <meta
       name="description"
-      content="Compare Tovila's 5 engineered residential water packages in Ghana. From essential whole-house filtration to full luxury estate softening and reverse osmosis."
+      content="Compare Tovila's 5 engineered residential water packages in Ghana. From Essential whole-house filtration to Luxury Home continuous softening and multi-point reverse osmosis."
     />
     <meta
       property="og:title"
@@ -14,11 +14,12 @@
     />
     <meta
       property="og:description"
-      content="Compare Tovila's 5 engineered residential water packages in Ghana. From essential whole-house filtration to full luxury estate softening and reverse osmosis."
+      content="Compare Tovila's 5 engineered residential water packages in Ghana. From Essential whole-house filtration to Luxury Home continuous softening and multi-point reverse osmosis."
     />
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="canonical" href="https://tovilawatersolutions.com/residential-packages.html" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -76,6 +77,61 @@
         color: var(--brand-red);
         margin-bottom: 0.4rem;
       }
+      .tier-feature-card {
+        background: var(--ink);
+        color: #fff;
+        border: 1px solid #1a3353;
+        border-radius: 16px;
+        padding: clamp(1.6rem, 3.5vw, 2.5rem);
+        position: relative;
+        overflow: hidden;
+      }
+      .tier-feature-card h3 {
+        color: #fff;
+        font-size: clamp(1.6rem, 2.6vw, 2.2rem);
+        margin-bottom: 0.3rem;
+      }
+      .tier-feature-card .split-feature {
+        display: grid;
+        grid-template-columns: 1.15fr 0.85fr;
+        gap: 2.2rem;
+        align-items: start;
+        margin-top: 1rem;
+      }
+      @media (max-width: 900px) {
+        .tier-feature-card .split-feature {
+          grid-template-columns: 1fr;
+          gap: 1.5rem;
+        }
+      }
+      .packages-subgrid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+        margin-top: 1.5rem;
+      }
+      @media (max-width: 768px) {
+        .packages-subgrid {
+          grid-template-columns: 1fr;
+        }
+      }
+      .config-note {
+        font-size: 0.82rem;
+        line-height: 1.45;
+        border-radius: 6px;
+        padding: 0.55rem 0.8rem;
+        margin: 0.5rem 0 0.8rem 0;
+      }
+      .config-note.on-light {
+        color: var(--mist);
+        background: #f1f5f9;
+        border-left: 3px solid var(--home-tint);
+      }
+      .config-note.on-dark {
+        color: #9bbad3;
+        background: rgba(255, 255, 255, 0.07);
+        border-left: 3px solid var(--red-bright);
+      }
     </style>
   </head>
   <body>
@@ -83,12 +139,8 @@
     <header class="site-nav">
       <div class="wrap nav-inner">
         <a class="logo" href="index.html" aria-label="Tovila Water Solutions home">
-          <svg viewBox="0 0 26 32" aria-hidden="true">
-            <path d="M13 0C13 0 1 13.4 1 21a12 12 0 0 0 24 0C25 13.4 13 0 13 0z" fill="#9c2236" />
-            <path d="M13 7c0 0-6 7.6-6 12a6 6 0 0 0 12 0c0-4.4-6-12-6-12z" fill="#4f9fc9" />
-          </svg>
-          <span class="wm">TOVILA<small>Water Solutions</small></span>
-        </a>
+  <img src="img/tovila-logo.jpg" alt="Tovila Water Solutions" class="logo-img">
+</a>
         <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
           <li class="drop">
@@ -131,15 +183,8 @@
     <div id="mobile-menu" role="dialog" aria-modal="true" aria-label="Site menu">
       <div class="m-top">
         <a class="logo" href="index.html" aria-label="Tovila Water Solutions home">
-          <svg viewBox="0 0 26 32" aria-hidden="true">
-            <path d="M13 0C13 0 1 13.4 1 21a12 12 0 0 0 24 0C25 13.4 13 0 13 0z" fill="#9c2236" />
-            <path d="M13 7c0 0-6 7.6-6 12a6 6 0 0 0 12 0c0-4.4-6-12-6-12z" fill="#4f9fc9" />
-          </svg>
-          <span class="wm">TOVILA<small>Water Solutions</small></span> </a
-        ><button class="m-close" type="button">Close</button>
-      </div>
-      <nav>
-        <a href="index.html">Home</a><a href="projects.html">Projects</a><a href="csr.html">CSR</a
+  <img src="img/tovila-logo.jpg" alt="Tovila Water Solutions" class="logo-img">
+</a><a href="projects.html">Projects</a><a href="csr.html">CSR</a
         ><a href="about.html">About</a><a href="contact.html">Contact</a>
         <p class="m-group">Solutions</p>
         <a href="residential.html" aria-current="page">Residential</a
@@ -229,155 +274,189 @@
           <span class="eyebrow">Five Calibrated Tiers</span>
           <h2>Explore the Five Home Packages</h2>
           <p class="lead">
-            Review detailed specifications, target applications, typical equipment footprints, and indicative pricing across our 5 residential tiers:
+            Review detailed specifications, target applications, typical equipment footprints, and engineering scopes across our 5 residential tiers:
           </p>
 
-          <div class="flag">Note &middot; All pricing and footprint dimensions are typical indicative estimates &mdash; final quotes provided following on-site water assessment</div>
+          <div class="flag">Note &middot; System configurations and pricing are provided following an on-site water assessment</div>
 
-          <div class="grid g3" style="margin-top: 2rem">
-            <!-- Tier 1 -->
-            <div class="card a-residential pad-l reveal" style="display: flex; flex-direction: column">
-              <span class="accent-bar"></span>
-              <span class="tier-flag">Starting Out</span>
-              <h3 style="margin-bottom: 0.2rem">Basic Home</h3>
-              <p class="microcopy" style="color: var(--home-tint); margin-bottom: 1rem">
-                Point-of-entry sediment and odour filtration
-              </p>
-              <p><strong>Problem solved:</strong> Brown, muddy water, sand in taps, chlorine odours, and pipe rust.</p>
-              <p><strong>Who it's for:</strong> 1–3 bedroom apartments or homes on municipal GWCL supply wanting clean utility water.</p>
-              <div style="flex-grow: 1; margin: 1rem 0">
-                <h4 style="font-size: 0.95rem; margin-bottom: 0.5rem">What's included:</h4>
-                <ul class="checks" style="font-size: 0.9rem">
-                  <li>20" Big Blue sediment pre-filter (5 micron)</li>
-                  <li>20" Activated carbon block filter</li>
-                  <li>Pressure-rated housings with bypass manifold</li>
-                  <li>Upstream &amp; downstream pressure gauges</li>
-                  <li>Starter replacement cartridge set</li>
-                </ul>
-              </div>
-              <div style="padding-top: 0.8rem; border-top: 1px solid var(--line-light); margin-bottom: 1.2rem">
-                <p style="font-size: 0.84rem; color: var(--mist); margin: 0">
-                  <small>Typical footprint: ~0.8m &times; 0.3m wall space.</small><br />
-                  <small>Indicative range: GHS 4,500 &ndash; 7,500 (typical estimate pending site survey).</small>
+          <div style="margin-top: 2rem">
+            <!-- Tier 1: Luxury Home (Visual flagship, largest and most prominent, spans full width) -->
+            <div class="tier-feature-card reveal" style="display: flex; flex-direction: column">
+              <div>
+                <span class="tier-flag" style="color: #ff8a80; font-weight: 600">Most Complete &middot; Flagship Tier</span>
+                <h3 style="margin-bottom: 0.2rem">Luxury Home</h3>
+                <p class="microcopy" style="color: #9bbad3; margin-bottom: 1.2rem; font-size: 0.95rem">
+                  Duplex continuous softening + catalytic media + multi-point RO + UV + continuous telemetry
                 </p>
               </div>
-              <a class="btn sm" href="residential.html#book" data-entry="residential"><span>Request This Package</span></a>
+
+              <div class="split-feature">
+                <div>
+                  <p style="color: #d6e4f0">
+                    <strong style="color: #fff">Problem solved:</strong> Heavy groundwater iron, zero downtime continuous soft water, multi-fixture pressure drops, and complete estate water assurance.
+                  </p>
+                  <p style="color: #d6e4f0">
+                    <strong style="color: #fff">Who it's for:</strong> Expansive multi-story residences, luxury villas, diplomatic compounds, and properties with high peak demand.
+                  </p>
+                  <p style="font-size: 0.84rem; color: #8eaec7; margin-top: 0.8rem">
+                    <small>Typical footprint: dedicated ~2.5m &times; 1.2m utility plant room.</small>
+                  </p>
+
+                  <div style="padding-top: 1.2rem; border-top: 1px solid rgba(255, 255, 255, 0.15); margin-top: 1.4rem">
+                    <p style="font-size: 0.88rem; color: #c4d3e2; margin: 0 0 0.9rem 0">
+                      Pricing is provided after an on-site water assessment.
+                    </p>
+                    <a class="btn" href="residential.html#book" data-entry="residential"><span>Request This Package</span></a>
+                  </div>
+                </div>
+
+                <div>
+                  <h4 style="color: #fff; font-size: 1rem; margin-bottom: 0.4rem">What's included:</h4>
+                  <p class="config-note on-dark">
+                    Exact system composition is confirmed during the on-site assessment &mdash; the specific component lists are typical configurations, not confirmed specs.
+                  </p>
+                  <ul class="checks" style="font-size: 0.92rem; color: #d6e4f0; padding-left: 1.2rem">
+                    <li>Commercial-grade multi-vessel catalytic media filtration</li>
+                    <li>Duplex alternating water softener (24/7 continuous soft water)</li>
+                    <li>High-flow stainless steel UV disinfection chamber</li>
+                    <li>Multi-point kitchen &amp; master suite RO dispensers</li>
+                    <li>Pressure booster management &amp; surge suppression</li>
+                    <li>Integrated IoT telemetry with remote monitoring alerts</li>
+                    <li>Annual scheduled service contract &amp; priority technician dispatch</li>
+                  </ul>
+                </div>
+              </div>
             </div>
 
-            <!-- Tier 2 -->
-            <div class="card a-residential pad-l reveal" style="display: flex; flex-direction: column">
-              <span class="accent-bar"></span>
-              <span class="tier-flag">Most Popular</span>
-              <h3 style="margin-bottom: 0.2rem">Family Safe</h3>
-              <p class="microcopy" style="color: var(--home-tint); margin-bottom: 1rem">
-                Filtration + UV biological sterilization
-              </p>
-              <p><strong>Problem solved:</strong> Cloudy water, chemical smells, plus living bacteria, cysts, and airborne tank pathogens.</p>
-              <p><strong>Who it's for:</strong> 3–5 bedroom homes and families with children prioritizing biological safety on poly-tanks.</p>
-              <div style="flex-grow: 1; margin: 1rem 0">
-                <h4 style="font-size: 0.95rem; margin-bottom: 0.5rem">What's included:</h4>
-                <ul class="checks" style="font-size: 0.9rem">
-                  <li>3-stage whole-house filtration (sediment + dual carbon)</li>
-                  <li>High-output whole-house UV disinfection system</li>
-                  <li>Digital lamp ballast with alarm</li>
-                  <li>Under-sink culinary tap connection</li>
-                  <li>Annual preventative service plan included</li>
-                </ul>
-              </div>
-              <div style="padding-top: 0.8rem; border-top: 1px solid var(--line-light); margin-bottom: 1.2rem">
-                <p style="font-size: 0.84rem; color: var(--mist); margin: 0">
-                  <small>Typical footprint: ~1.2m &times; 0.4m wall/floor area.</small><br />
-                  <small>Indicative range: GHS 9,500 &ndash; 15,000 (typical estimate pending site survey).</small>
+            <!-- Subgrid for Tiers 2-5: Complete Home, Pure Drinking Water, Premium, Essential -->
+            <div class="packages-subgrid">
+              <!-- Tier 2: Complete Home -->
+              <div class="card a-residential pad-l reveal" style="display: flex; flex-direction: column">
+                <span class="accent-bar"></span>
+                <span class="tier-flag">Whole-Household Coverage</span>
+                <h3 style="margin-bottom: 0.2rem">Complete Home</h3>
+                <p class="microcopy" style="color: var(--home-tint); margin-bottom: 1rem">
+                  Filtration + Softener + UV + Kitchen RO
                 </p>
+                <p><strong>Problem solved:</strong> Hard water limescale, bath scum, sediment, pathogens, and high dissolved salts in drinking water.</p>
+                <p><strong>Who it's for:</strong> Modern residences, detached homes, and properties running on hard borehole or mixed supply.</p>
+                <div style="flex-grow: 1; margin: 1rem 0">
+                  <h4 style="font-size: 0.95rem; margin-bottom: 0.3rem">What's included:</h4>
+                  <p class="config-note on-light">
+                    Exact system composition is confirmed during the on-site assessment &mdash; the specific component lists are typical configurations, not confirmed specs.
+                  </p>
+                  <ul class="checks" style="font-size: 0.9rem; padding-left: 1.2rem">
+                    <li>Whole-house sediment &amp; catalytic filtration</li>
+                    <li>Automatic ion-exchange water softener with brine tank</li>
+                    <li>Whole-house germicidal UV disinfection reactor</li>
+                    <li>5-stage under-sink Reverse Osmosis system with tank</li>
+                    <li>Smart water leak sensor &amp; bypass manifold</li>
+                  </ul>
+                </div>
+                <div style="padding-top: 0.8rem; border-top: 1px solid var(--line-light); margin-top: auto">
+                  <p style="font-size: 0.84rem; color: var(--mist); margin: 0 0 0.8rem 0">
+                    <small>Typical footprint: ~1.8m &times; 0.8m plant space.</small><br />
+                    Pricing is provided after an on-site water assessment.
+                  </p>
+                  <a class="btn sm" href="residential.html#book" data-entry="residential"><span>Request This Package</span></a>
+                </div>
               </div>
-              <a class="btn sm" href="residential.html#book" data-entry="residential"><span>Request This Package</span></a>
-            </div>
 
-            <!-- Tier 3 -->
-            <div class="card a-residential pad-l reveal" style="display: flex; flex-direction: column">
-              <span class="accent-bar"></span>
-              <span class="tier-flag">Maximum Protection</span>
-              <h3 style="margin-bottom: 0.2rem">Complete Home</h3>
-              <p class="microcopy" style="color: var(--home-tint); margin-bottom: 1rem">
-                Filtration + Softener + UV + Kitchen RO
-              </p>
-              <p><strong>Problem solved:</strong> Hard water limescale, bath scum, sediment, pathogens, and high dissolved salts in drinking water.</p>
-              <p><strong>Who it's for:</strong> Modern residences, detached homes, and properties running on hard borehole or mixed supply.</p>
-              <div style="flex-grow: 1; margin: 1rem 0">
-                <h4 style="font-size: 0.95rem; margin-bottom: 0.5rem">What's included:</h4>
-                <ul class="checks" style="font-size: 0.9rem">
-                  <li>Whole-house sediment &amp; catalytic filtration</li>
-                  <li>Automatic ion-exchange water softener with brine tank</li>
-                  <li>Whole-house germicidal UV disinfection reactor</li>
-                  <li>5-stage under-sink Reverse Osmosis system with tank</li>
-                  <li>Smart water leak sensor &amp; bypass manifold</li>
-                </ul>
-              </div>
-              <div style="padding-top: 0.8rem; border-top: 1px solid var(--line-light); margin-bottom: 1.2rem">
-                <p style="font-size: 0.84rem; color: var(--mist); margin: 0">
-                  <small>Typical footprint: ~1.8m &times; 0.8m plant space.</small><br />
-                  <small>Indicative range: GHS 22,000 &ndash; 35,000 (typical estimate pending site survey).</small>
+              <!-- Tier 3: Pure Drinking Water -->
+              <div class="card a-residential pad-l reveal" style="display: flex; flex-direction: column">
+                <span class="accent-bar"></span>
+                <span class="tier-flag">Drinking Focus</span>
+                <h3 style="margin-bottom: 0.2rem">Pure Drinking Water</h3>
+                <p class="microcopy" style="color: var(--home-tint); margin-bottom: 1rem">
+                  High-rejection Reverse Osmosis for kitchen &amp; fridge
                 </p>
+                <p><strong>Problem solved:</strong> Eliminates dispenser bottle orders and sachet reliance with pure bottled-quality drinking water.</p>
+                <p><strong>Who it's for:</strong> Tenants or homeowners whose utility water is acceptable but need pure, safe drinking water on tap.</p>
+                <div style="flex-grow: 1; margin: 1rem 0">
+                  <h4 style="font-size: 0.95rem; margin-bottom: 0.3rem">What's included:</h4>
+                  <p class="config-note on-light">
+                    Exact system composition is confirmed during the on-site assessment &mdash; the specific component lists are typical configurations, not confirmed specs.
+                  </p>
+                  <ul class="checks" style="font-size: 0.9rem; padding-left: 1.2rem">
+                    <li>5-stage molecular RO filtration (0.0001 micron)</li>
+                    <li>Alkaline mineral remineralisation cartridge</li>
+                    <li>Dedicated lead-free designer counter faucet</li>
+                    <li>8-litre pressurized food-grade reservoir tank</li>
+                    <li>Booster pump for low municipal pressure</li>
+                  </ul>
+                </div>
+                <div style="padding-top: 0.8rem; border-top: 1px solid var(--line-light); margin-top: auto">
+                  <p style="font-size: 0.84rem; color: var(--mist); margin: 0 0 0.8rem 0">
+                    <small>Typical footprint: standard under-sink cabinet space.</small><br />
+                    Pricing is provided after an on-site water assessment.
+                  </p>
+                  <a class="btn sm" href="residential.html#book" data-entry="residential"><span>Request This Package</span></a>
+                </div>
               </div>
-              <a class="btn sm" href="residential.html#book" data-entry="residential"><span>Request This Package</span></a>
-            </div>
 
-            <!-- Tier 4 -->
-            <div class="card a-residential pad-l reveal" style="display: flex; flex-direction: column">
-              <span class="accent-bar"></span>
-              <span class="tier-flag">Drinking Focus</span>
-              <h3 style="margin-bottom: 0.2rem">Pure Drinking</h3>
-              <p class="microcopy" style="color: var(--home-tint); margin-bottom: 1rem">
-                High-rejection Reverse Osmosis for kitchen &amp; fridge
-              </p>
-              <p><strong>Problem solved:</strong> Eliminates dispenser bottle orders and sachet reliance with pure bottled-quality drinking water.</p>
-              <p><strong>Who it's for:</strong> Tenants or homeowners whose utility water is acceptable but need pure, safe drinking water on tap.</p>
-              <div style="flex-grow: 1; margin: 1rem 0">
-                <h4 style="font-size: 0.95rem; margin-bottom: 0.5rem">What's included:</h4>
-                <ul class="checks" style="font-size: 0.9rem">
-                  <li>5-stage molecular RO filtration (0.0001 micron)</li>
-                  <li>Alkaline mineral remineralisation cartridge</li>
-                  <li>Dedicated lead-free designer counter faucet</li>
-                  <li>8-litre pressurized food-grade reservoir tank</li>
-                  <li>Booster pump for low municipal pressure</li>
-                </ul>
-              </div>
-              <div style="padding-top: 0.8rem; border-top: 1px solid var(--line-light); margin-bottom: 1.2rem">
-                <p style="font-size: 0.84rem; color: var(--mist); margin: 0">
-                  <small>Typical footprint: standard under-sink cabinet space.</small><br />
-                  <small>Indicative range: GHS 3,800 &ndash; 6,500 (typical estimate pending site survey).</small>
+              <!-- Tier 4: Premium -->
+              <div class="card a-residential pad-l reveal" style="display: flex; flex-direction: column">
+                <span class="accent-bar"></span>
+                <span class="tier-flag">Scale &amp; Silt Defense</span>
+                <h3 style="margin-bottom: 0.2rem">Premium</h3>
+                <p class="microcopy" style="color: var(--home-tint); margin-bottom: 1rem">
+                  Filtration plus softening for scale-prone supplies
                 </p>
+                <p><strong>Problem solved:</strong> Hard water limescale, bath scum, calcified plumbing and fixtures, sediment, and chlorine taste/odour.</p>
+                <p><strong>Who it's for:</strong> Homes with scale-prone municipal GWCL or borehole water wanting plumbing and appliance defense.</p>
+                <div style="flex-grow: 1; margin: 1rem 0">
+                  <h4 style="font-size: 0.95rem; margin-bottom: 0.3rem">What's included:</h4>
+                  <p class="config-note on-light">
+                    Exact system composition is confirmed during the on-site assessment &mdash; the specific component lists are typical configurations, not confirmed specs.
+                  </p>
+                  <ul class="checks" style="font-size: 0.9rem; padding-left: 1.2rem">
+                    <li>20" Big Blue sediment pre-filter (5 micron)</li>
+                    <li>20" Activated carbon block filter</li>
+                    <li>Automatic ion-exchange water softener with digital valve</li>
+                    <li>High-capacity brine salt storage tank</li>
+                    <li>Integrated bypass manifold &amp; pressure gauges</li>
+                  </ul>
+                </div>
+                <div style="padding-top: 0.8rem; border-top: 1px solid var(--line-light); margin-top: auto">
+                  <p style="font-size: 0.84rem; color: var(--mist); margin: 0 0 0.8rem 0">
+                    <small>Typical footprint: ~1.4m &times; 0.6m wall/floor area.</small><br />
+                    Pricing is provided after an on-site water assessment.
+                  </p>
+                  <a class="btn sm" href="residential.html#book" data-entry="residential"><span>Request This Package</span></a>
+                </div>
               </div>
-              <a class="btn sm" href="residential.html#book" data-entry="residential"><span>Request This Package</span></a>
-            </div>
 
-            <!-- Tier 5 -->
-            <div class="card a-residential pad-l reveal" style="display: flex; flex-direction: column">
-              <span class="accent-bar"></span>
-              <span class="tier-flag">High Capacity</span>
-              <h3 style="margin-bottom: 0.2rem">Luxury Estate</h3>
-              <p class="microcopy" style="color: var(--home-tint); margin-bottom: 1rem">
-                Duplex continuous softening + multi-vessel media
-              </p>
-              <p><strong>Problem solved:</strong> Heavy groundwater iron, zero downtime continuous soft water, multi-fixture pressure drops.</p>
-              <p><strong>Who it's for:</strong> Expansive multi-story residences, luxury villas, guesthouses, and properties with high peak demand.</p>
-              <div style="flex-grow: 1; margin: 1rem 0">
-                <h4 style="font-size: 0.95rem; margin-bottom: 0.5rem">What's included:</h4>
-                <ul class="checks" style="font-size: 0.9rem">
-                  <li>Commercial-grade multi-vessel catalytic media filtration</li>
-                  <li>Duplex alternating water softener (24/7 continuous soft water)</li>
-                  <li>High-flow stainless steel UV disinfection chamber</li>
-                  <li>Multi-point kitchen &amp; master suite RO dispensers</li>
-                  <li>Integrated telemetry with remote monitoring alerts</li>
-                </ul>
-              </div>
-              <div style="padding-top: 0.8rem; border-top: 1px solid var(--line-light); margin-bottom: 1.2rem">
-                <p style="font-size: 0.84rem; color: var(--mist); margin: 0">
-                  <small>Typical footprint: dedicated ~2.5m &times; 1.2m utility plant room.</small><br />
-                  <small>Indicative range: GHS 45,000 &ndash; 80,000+ (typical estimate pending site survey).</small>
+              <!-- Tier 5: Essential -->
+              <div class="card a-residential pad-l reveal" style="display: flex; flex-direction: column">
+                <span class="accent-bar"></span>
+                <span class="tier-flag">Sensible First Step</span>
+                <h3 style="margin-bottom: 0.2rem">Essential</h3>
+                <p class="microcopy" style="color: var(--home-tint); margin-bottom: 1rem">
+                  Point-of-entry sediment and odour filtration
                 </p>
+                <p><strong>Problem solved:</strong> Brown, muddy water, sand in taps, chlorine odours, and pipe rust.</p>
+                <p><strong>Who it's for:</strong> 1–3 bedroom apartments or homes on municipal GWCL supply wanting clean utility water.</p>
+                <div style="flex-grow: 1; margin: 1rem 0">
+                  <h4 style="font-size: 0.95rem; margin-bottom: 0.3rem">What's included:</h4>
+                  <p class="config-note on-light">
+                    Exact system composition is confirmed during the on-site assessment &mdash; the specific component lists are typical configurations, not confirmed specs.
+                  </p>
+                  <ul class="checks" style="font-size: 0.9rem; padding-left: 1.2rem">
+                    <li>20" Big Blue sediment pre-filter (5 micron)</li>
+                    <li>20" Activated carbon block filter</li>
+                    <li>Pressure-rated housings with bypass manifold</li>
+                    <li>Upstream &amp; downstream pressure gauges</li>
+                    <li>Starter replacement cartridge set</li>
+                  </ul>
+                </div>
+                <div style="padding-top: 0.8rem; border-top: 1px solid var(--line-light); margin-top: auto">
+                  <p style="font-size: 0.84rem; color: var(--mist); margin: 0 0 0.8rem 0">
+                    <small>Typical footprint: ~0.8m &times; 0.3m wall space.</small><br />
+                    Pricing is provided after an on-site water assessment.
+                  </p>
+                  <a class="btn sm" href="residential.html#book" data-entry="residential"><span>Request This Package</span></a>
+                </div>
               </div>
-              <a class="btn sm" href="residential.html#book" data-entry="residential"><span>Request This Package</span></a>
             </div>
           </div>
         </div>
@@ -409,83 +488,91 @@
               <thead>
                 <tr>
                   <th>Feature / Treatment</th>
-                  <th>Basic Home</th>
-                  <th>Family Safe</th>
+                  <th>Luxury Home</th>
                   <th>Complete Home</th>
-                  <th>Pure Drinking</th>
-                  <th>Luxury Estate</th>
+                  <th>Pure Drinking Water</th>
+                  <th>Premium</th>
+                  <th>Essential</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <td><strong>Target Application</strong></td>
-                  <td>Apartments &amp; Flats</td>
-                  <td>Single Families</td>
+                  <td>Luxury Estates &amp; Villas</td>
                   <td>Detached Residences</td>
                   <td>Kitchen Counter/Sink</td>
-                  <td>Luxury Estates &amp; Villas</td>
+                  <td>Homes with Scale &amp; Silt</td>
+                  <td>Apartments &amp; Flats</td>
                 </tr>
                 <tr>
                   <td><strong>Whole-House Sediment &amp; Carbon</strong></td>
-                  <td class="check">&#10003; Dual 20"</td>
-                  <td class="check">&#10003; Triple 20"</td>
+                  <td class="check">&#10003; High-Flow Media</td>
                   <td class="check">&#10003; Catalytic Skid</td>
                   <td class="dash">&mdash;</td>
-                  <td class="check">&#10003; High-Flow Media</td>
+                  <td class="check">&#10003; Dual 20"</td>
+                  <td class="check">&#10003; Dual 20"</td>
                 </tr>
                 <tr>
                   <td><strong>Ion-Exchange Softener (Scale Defense)</strong></td>
-                  <td class="dash">&mdash;</td>
+                  <td class="check">&#10003; Duplex Continuous</td>
+                  <td class="check">&#10003; Simplex Auto</td>
                   <td class="dash">&mdash;</td>
                   <td class="check">&#10003; Simplex Auto</td>
                   <td class="dash">&mdash;</td>
-                  <td class="check">&#10003; Duplex Continuous</td>
                 </tr>
                 <tr>
                   <td><strong>Whole-House UV Disinfection</strong></td>
-                  <td class="dash">&mdash;</td>
-                  <td class="check">&#10003; Included</td>
-                  <td class="check">&#10003; Included</td>
-                  <td class="dash">&mdash;</td>
                   <td class="check">&#10003; High-Output SS</td>
+                  <td class="check">&#10003; Included</td>
+                  <td class="dash">&mdash;</td>
+                  <td class="dash">Optional add-on</td>
+                  <td class="dash">&mdash;</td>
                 </tr>
                 <tr>
                   <td><strong>Reverse Osmosis (TDS &amp; Drinking)</strong></td>
-                  <td class="dash">&mdash;</td>
-                  <td class="dash">Optional add-on</td>
+                  <td class="check">&#10003; Multi-Point RO</td>
                   <td class="check">&#10003; 5-Stage Kitchen RO</td>
                   <td class="check">&#10003; 5-Stage Remineralised</td>
-                  <td class="check">&#10003; Multi-Point RO</td>
+                  <td class="dash">Optional add-on</td>
+                  <td class="dash">&mdash;</td>
                 </tr>
                 <tr>
                   <td><strong>Smart Leak Detection &amp; Telemetry</strong></td>
-                  <td class="dash">&mdash;</td>
-                  <td class="dash">&mdash;</td>
+                  <td class="check">&#10003; 24/7 Remote Telemetry</td>
                   <td class="check">&#10003; Local Sensor</td>
                   <td class="dash">&mdash;</td>
-                  <td class="check">&#10003; 24/7 Remote Telemetry</td>
+                  <td class="dash">Optional add-on</td>
+                  <td class="dash">&mdash;</td>
                 </tr>
                 <tr>
                   <td><strong>Typical Footprint (Estimated)</strong></td>
-                  <td>0.8m &times; 0.3m</td>
-                  <td>1.2m &times; 0.4m</td>
+                  <td>2.5m &times; 1.2m plant room</td>
                   <td>1.8m &times; 0.8m</td>
                   <td>Under kitchen sink</td>
-                  <td>2.5m &times; 1.2m plant room</td>
+                  <td>1.4m &times; 0.6m</td>
+                  <td>0.8m &times; 0.3m</td>
                 </tr>
                 <tr>
-                  <td><strong>Indicative Investment Range</strong></td>
-                  <td>GHS 4.5k &ndash; 7.5k <span class="tier-flag">*typical</span></td>
-                  <td>GHS 9.5k &ndash; 15k <span class="tier-flag">*typical</span></td>
-                  <td>GHS 22k &ndash; 35k <span class="tier-flag">*typical</span></td>
-                  <td>GHS 3.8k &ndash; 6.5k <span class="tier-flag">*typical</span></td>
-                  <td>GHS 45k &ndash; 80k+ <span class="tier-flag">*typical</span></td>
+                  <td><strong>Pricing</strong></td>
+                  <td>Provided after on-site water assessment</td>
+                  <td>Provided after on-site water assessment</td>
+                  <td>Provided after on-site water assessment</td>
+                  <td>Provided after on-site water assessment</td>
+                  <td>Provided after on-site water assessment</td>
+                </tr>
+                <tr>
+                  <td><strong>Next Step</strong></td>
+                  <td><a class="btn sm" href="residential.html#book" data-entry="residential"><span>Request This Package</span></a></td>
+                  <td><a class="btn sm" href="residential.html#book" data-entry="residential"><span>Request This Package</span></a></td>
+                  <td><a class="btn sm" href="residential.html#book" data-entry="residential"><span>Request This Package</span></a></td>
+                  <td><a class="btn sm" href="residential.html#book" data-entry="residential"><span>Request This Package</span></a></td>
+                  <td><a class="btn sm" href="residential.html#book" data-entry="residential"><span>Request This Package</span></a></td>
                 </tr>
               </tbody>
             </table>
           </div>
           <p class="microcopy" style="margin-top: 0.8rem; color: var(--mist)">
-            * All figures represent typical indicative guidance. Pricing varies based on pipe sizing, tested source water mineral load, and specific building plumbing geometry.
+            Exact system composition and pricing are confirmed during the on-site assessment &mdash; listed specifications are typical configurations, not confirmed specs.
           </p>
         </div>
       </section>
@@ -501,7 +588,7 @@
               <h3>Can I customise a package to fit my specific home?</h3>
               <p>
                 Absolutely. Our five tiers serve as established engineering baselines, but every Tovila installation is customised.
-                If you love the Family Safe tier but also want an under-sink RO system, or require custom iron-removal media for an aggressive borehole,
+                If you select the Premium tier but also want an under-sink RO system, or require custom iron-removal media for an aggressive borehole,
                 we modify the skid layout accordingly.
               </p>
             </div>
@@ -568,15 +655,8 @@
         <div class="f-grid">
           <div>
             <a class="logo" href="index.html" aria-label="Tovila Water Solutions home">
-              <svg viewBox="0 0 26 32" aria-hidden="true">
-                <path
-                  d="M13 0C13 0 1 13.4 1 21a12 12 0 0 0 24 0C25 13.4 13 0 13 0z"
-                  fill="#9c2236"
-                />
-                <path d="M13 7c0 0-6 7.6-6 12a6 6 0 0 0 12 0c0-4.4-6-12-6-12z" fill="#4f9fc9" />
-              </svg>
-              <span class="wm">TOVILA<small>Water Solutions</small></span>
-            </a>
+  <img src="img/tovila-logo.jpg" alt="Tovila Water Solutions" class="logo-img">
+</a>
             <p style="margin-top: 1rem; max-width: 34ch">
               Complete water treatment, purification and water engineering solutions — engineered
               around your source, application and budget.

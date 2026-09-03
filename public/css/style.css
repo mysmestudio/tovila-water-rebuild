@@ -191,13 +191,30 @@ section {
 .logo {
   display: flex;
   align-items: center;
-  gap: 0.6rem;
   text-decoration: none;
   flex: 0 0 auto;
 }
-.logo svg {
-  width: 26px;
-  height: 32px;
+.logo-img {
+  height: 48px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  display: block;
+  flex-shrink: 0;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.logo:hover .logo-img {
+  transform: scale(1.04);
+}
+#mobile-menu .logo-img,
+.m-top .logo-img {
+  height: 40px;
+  width: auto;
+}
+.site-footer .logo .logo-img,
+.site-footer .logo-img {
+  height: 54px;
+  width: auto;
 }
 .logo .wm {
   font-family: var(--display);
@@ -617,6 +634,8 @@ summary:focus-visible {
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--brand-red);
+  position: relative;
+  z-index: 2;
 }
 .bullets {
   margin: 0.8rem 0 0;
@@ -641,6 +660,7 @@ summary:focus-visible {
   font-size: 0.88rem;
   clip-path: circle(0% at 50% 100%);
   transition: clip-path 0.55s cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
 }
 .droplet:hover .drop-reveal,
 .droplet:focus-within .drop-reveal {
