@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Knowledge Centre | Water Engineering, Explained | Tovila Water Solutions Ghana</title>
+    <meta
+      name="description"
+      content="Practical water engineering education for homeowners, businesses, plant technicians and facility engineers in Ghana. Demystifying water quality, treatment physics and system design."
+    />
+    <meta
+      property="og:title"
+      content="Knowledge Centre | Water Engineering, Explained | Tovila Water Solutions Ghana"
+    />
+    <meta
+      property="og:description"
+      content="Practical water engineering education for homeowners, businesses, plant technicians and facility engineers in Ghana. Demystifying water quality, treatment physics and system design."
+    />
+    <meta property="og:type" content="website" />
+    <link rel="canonical" href="https://tovilawatersolutions.com/knowledge-centre.html" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/water.css" />
+  </head>
+  <body>
+    <div id="scroll-progress" aria-hidden="true"></div>
+    <header class="site-nav">
+      <div class="wrap nav-inner">
+        <a class="logo" href="index.html" aria-label="Tovila Water Solutions home">
+          <img src="img/tovila-logo.jpg" alt="Tovila Water Solutions" class="logo-img" />
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li class="drop">
+            <button class="drop-toggle" type="button">Solutions</button>
+            <ul class="drop-menu">
+              <li><a href="residential.html">Residential</a></li>
+              <li><a href="commercial.html">Commercial</a></li>
+              <li><a href="industrial.html">Industrial &amp; Institutional</a></li>
+              <li><a href="services.html">Services</a></li>
+            </ul>
+          </li>
+          <li class="drop">
+            <button class="drop-toggle" type="button">Learn</button>
+            <ul class="drop-menu">
+              <li><a href="training.html">Training</a></li>
+              <li><a href="knowledge-centre.html" aria-current="page">Knowledge Centre</a></li>
+            </ul>
+          </li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="csr.html">CSR</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li>
+            <a class="btn sm nav-cta" href="contact.html?subject=Request%20Assessment"
+              ><span>Request a Water Assessment</span></a
+            >
+          </li>
+        </ul>
+        <button
+          class="hamburger"
+          type="button"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <div id="mobile-menu" role="dialog" aria-modal="true" aria-label="Site menu">
+      <div class="m-top">
+        <a class="logo" href="index.html" aria-label="Tovila Water Solutions home">
+          <img src="img/tovila-logo.jpg" alt="Tovila Water Solutions" class="logo-img" />
+        </a>
+        <button class="m-close" type="button">Close</button>
+      </div>
+      <nav>
+        <a href="index.html">Home</a><a href="projects.html">Projects</a><a href="csr.html">CSR</a
+        ><a href="about.html">About</a><a href="contact.html">Contact</a>
+        <p class="m-group">Solutions</p>
+        <a href="residential.html">Residential</a><a href="commercial.html">Commercial</a
+        ><a href="industrial.html">Industrial &amp; Institutional</a
+        ><a href="services.html">Services</a>
+        <p class="m-group">Learn</p>
+        <a href="training.html">Training</a
+        ><a href="knowledge-centre.html" aria-current="page">Knowledge Centre</a>
+        <p class="m-group">&nbsp;</p>
+        <a class="btn" href="contact.html?subject=Request%20Assessment"
+          ><span>Request a Water Assessment</span></a
+        >
+      </nav>
+    </div>
+
+    <main id="main-content">
+      <!-- Hero Banner -->
+      <section class="banner-x">
+        <div class="bmedia">
+          <img
+            src="img/hero-engineers.jpg"
+            width="1440"
+            height="960"
+            alt="Ghanaian water engineers discussing water chemistry and water treatment systems"
+          />
+        </div>
+        <canvas class="wcanvas" aria-hidden="true"></canvas>
+        <div class="wrap">
+          <span class="kicker on-dark">Knowledge Centre</span>
+          <h1>Water Engineering, Explained</h1>
+          <p class="lead">
+            Transparent, evidence-based water engineering notes for homeowners, commercial facility
+            operators, plant technicians and consulting engineers. Built around the actual chemical and
+            physical water conditions encountered across Ghana.
+          </p>
+        </div>
+      </section>
+
+      <svg
+        class="wave"
+        viewBox="0 0 1440 80"
+        preserveAspectRatio="none"
+        aria-hidden="true"
+        focusable="false"
+      >
+        <path
+          d="M0,40 C240,90 480,-10 720,30 C960,70 1200,10 1440,45 L1440,80 L0,80 Z"
+          fill="#ffffff"
+        />
+      </svg>
+
+      <!-- Knowledge Filter & Articles Grid Section -->
+      <section class="section" id="articles">
+        <div class="wrap">
+          <span class="eyebrow" style="color: var(--mid-blue)">Curated Technical Library</span>
+          <h2>Explore by Audience</h2>
+          <p class="lead" style="margin-bottom: 1.6rem">
+            Filter our engineering articles based on your application &mdash; from residential borehole diagnostics
+            to commercial equipment protection, technician troubleshooting protocols, and industrial membrane design.
+          </p>
+
+          <!-- Sliding filter-pill bar (liquid morph) -->
+          <div
+            class="pills"
+            role="group"
+            aria-label="Filter articles by audience"
+            data-filter-group
+            data-filter-target="#articles-grid"
+          >
+            <button class="pill on" type="button" data-filter="all" aria-pressed="true">
+              <span>All Articles</span>
+            </button>
+            <button class="pill" type="button" data-filter="homeowners" aria-pressed="false">
+              <span>Homeowners</span>
+            </button>
+            <button class="pill" type="button" data-filter="businesses" aria-pressed="false">
+              <span>Businesses</span>
+            </button>
+            <button class="pill" type="button" data-filter="technicians" aria-pressed="false">
+              <span>Technicians</span>
+            </button>
+            <button class="pill" type="button" data-filter="engineers" aria-pressed="false">
+              <span>Engineers</span>
+            </button>
+          </div>
+
+          <!-- Articles Grid: 12 Articles -->
+          <div class="grid g3" id="articles-grid" style="margin-top: 1.8rem">
+            
+            <!-- HOMEOWNERS 1 -->
+            <div class="card pad-l reveal droplet a-residential" data-cat="homeowners">
+              <span class="accent-bar" style="background: var(--home-tint)"></span>
+              <span class="mono" style="color: var(--home-tint); display: block; margin-bottom: 0.4rem">Homeowners</span>
+              <h3>Why Is My Borehole Water Brown?</h3>
+              <p>
+                Discoloured borehole water is usually dissolved iron oxidising, fine silt turbidity, or bacterial slime &mdash; and each requires a completely different fix.
+              </p>
+              <a class="more" href="kb-home-brown-water.html" style="color: var(--home-tint)">Read more &rarr;</a>
+            </div>
+
+            <!-- HOMEOWNERS 2 -->
+            <div class="card pad-l reveal droplet a-residential" data-cat="homeowners">
+              <span class="accent-bar" style="background: var(--home-tint)"></span>
+              <span class="mono" style="color: var(--home-tint); display: block; margin-bottom: 0.4rem">Homeowners</span>
+              <h3>Do I Need a Water Softener?</h3>
+              <p>
+                From scale on kettles to dry skin and soap that won&rsquo;t lather: how ion exchange swaps calcium for sodium and when your water source truly warrants it.
+              </p>
+              <a class="more" href="kb-home-water-softener.html" style="color: var(--home-tint)">Read more &rarr;</a>
+            </div>
+
+            <!-- HOMEOWNERS 3 -->
+            <div class="card pad-l reveal droplet a-residential" data-cat="homeowners">
+              <span class="accent-bar" style="background: var(--home-tint)"></span>
+              <span class="mono" style="color: var(--home-tint); display: block; margin-bottom: 0.4rem">Homeowners</span>
+              <h3>Is RO Necessary for Drinking Water?</h3>
+              <p>
+                Reverse osmosis gives unmatched purity, but produces reject water and removes minerals &mdash; learn when high TDS justifies it over simpler filtration.
+              </p>
+              <a class="more" href="kb-home-ro-necessary.html" style="color: var(--home-tint)">Read more &rarr;</a>
+            </div>
+
+            <!-- BUSINESSES 1 -->
+            <div class="card pad-l reveal droplet a-commercial" data-cat="businesses">
+              <span class="accent-bar" style="background: var(--mid-blue)"></span>
+              <span class="mono" style="color: var(--mid-blue); display: block; margin-bottom: 0.4rem">Businesses</span>
+              <h3>How Much Water Treatment Does My Hotel Need?</h3>
+              <p>
+                Profiling guest rooms, laundry, kitchens, and boilers to balance centralised whole-property treatment against targeted point-of-use systems.
+              </p>
+              <a class="more" href="kb-business-hotel-treatment.html" style="color: var(--mid-blue)">Read more &rarr;</a>
+            </div>
+
+            <!-- BUSINESSES 2 -->
+            <div class="card pad-l reveal droplet a-commercial" data-cat="businesses">
+              <span class="accent-bar" style="background: var(--mid-blue)"></span>
+              <span class="mono" style="color: var(--mid-blue); display: block; margin-bottom: 0.4rem">Businesses</span>
+              <h3>How Hard Water Affects Commercial Equipment</h3>
+              <p>
+                Calcium carbonate buildup reduces boiler heat transfer, clogs ice machines, ruins linens, and increases utility bills by up to 25%.
+              </p>
+              <a class="more" href="kb-business-hard-water-equipment.html" style="color: var(--mid-blue)">Read more &rarr;</a>
+            </div>
+
+            <!-- BUSINESSES 3 -->
+            <div class="card pad-l reveal droplet a-commercial" data-cat="businesses">
+              <span class="accent-bar" style="background: var(--mid-blue)"></span>
+              <span class="mono" style="color: var(--mid-blue); display: block; margin-bottom: 0.4rem">Businesses</span>
+              <h3>What Actually Happens During a Commercial Water Assessment</h3>
+              <p>
+                Demystifying the engineering survey: source inspection, on-site laboratory testing, demand profiling, and data-backed equipment recommendations.
+              </p>
+              <a class="more" href="kb-business-assessment-process.html" style="color: var(--mid-blue)">Read more &rarr;</a>
+            </div>
+
+            <!-- TECHNICIANS 1 -->
+            <div class="card pad-l reveal droplet a-training" data-cat="technicians">
+              <span class="accent-bar" style="background: var(--brand-red)"></span>
+              <span class="mono" style="color: var(--brand-red); display: block; margin-bottom: 0.4rem">Technicians</span>
+              <h3>Why Does an RO System Lose Pressure?</h3>
+              <p>
+                Sequential diagnostic workflow from feed inlet to membrane stages to isolate clogged pre-filters, fouled elements, failing pumps, or valve throttling.
+              </p>
+              <a class="more" href="kb-tech-ro-pressure.html" style="color: var(--brand-red)">Read more &rarr;</a>
+            </div>
+
+            <!-- TECHNICIANS 2 -->
+            <div class="card pad-l reveal droplet a-training" data-cat="technicians">
+              <span class="accent-bar" style="background: var(--brand-red)"></span>
+              <span class="mono" style="color: var(--brand-red); display: block; margin-bottom: 0.4rem">Technicians</span>
+              <h3>RO Membrane Fouling: Causes and Prevention</h3>
+              <p>
+                Understanding mineral scaling, organic slime, colloidal silt, and bacterial biofilm &mdash; plus chemical CIP wash protocols that recover flux.
+              </p>
+              <a class="more" href="kb-tech-membrane-fouling.html" style="color: var(--brand-red)">Read more &rarr;</a>
+            </div>
+
+            <!-- TECHNICIANS 3 -->
+            <div class="card pad-l reveal droplet a-training" data-cat="technicians">
+              <span class="accent-bar" style="background: var(--brand-red)"></span>
+              <span class="mono" style="color: var(--brand-red); display: block; margin-bottom: 0.4rem">Technicians</span>
+              <h3>Understanding RO Recovery Rate</h3>
+              <p>
+                The delicate engineering balance between water efficiency and membrane scaling risk: why recovery rate cannot be increased without considering feedwater chemistry.
+              </p>
+              <a class="more" href="kb-tech-ro-recovery.html" style="color: var(--brand-red)">Read more &rarr;</a>
+            </div>
+
+            <!-- ENGINEERS 1 -->
+            <div class="card pad-l reveal droplet a-industrial" data-cat="engineers">
+              <span class="accent-bar" style="background: var(--deep-blue)"></span>
+              <span class="mono" style="color: var(--deep-blue); display: block; margin-bottom: 0.4rem">Engineers</span>
+              <h3>RO System Design Considerations</h3>
+              <p>
+                Deterministic design inputs: full chemical speciation, Silt Density Index (SDI), design flux rates, staging arrays, and integrated CIP loops.
+              </p>
+              <a class="more" href="kb-eng-ro-design.html" style="color: var(--deep-blue)">Read more &rarr;</a>
+            </div>
+
+            <!-- ENGINEERS 2 -->
+            <div class="card pad-l reveal droplet a-industrial" data-cat="engineers">
+              <span class="accent-bar" style="background: var(--deep-blue)"></span>
+              <span class="mono" style="color: var(--deep-blue); display: block; margin-bottom: 0.4rem">Engineers</span>
+              <h3>Pretreatment Selection for RO Systems</h3>
+              <p>
+                Why membranes are only as durable as their upstream barriers: selecting media filtration, activated carbon, softening, and 5-micron polishers.
+              </p>
+              <a class="more" href="kb-eng-pretreatment.html" style="color: var(--deep-blue)">Read more &rarr;</a>
+            </div>
+
+            <!-- ENGINEERS 3 -->
+            <div class="card pad-l reveal droplet a-industrial" data-cat="engineers">
+              <span class="accent-bar" style="background: var(--deep-blue)"></span>
+              <span class="mono" style="color: var(--deep-blue); display: block; margin-bottom: 0.4rem">Engineers</span>
+              <h3>Water Chemistry and Membrane Scaling</h3>
+              <p>
+                Predicting mineral saturation with LSI and Stiff-Davis indices, managing retrograde solubility, antiscalant threshold dosing, and pH optimisation.
+              </p>
+              <a class="more" href="kb-eng-membrane-scaling.html" style="color: var(--deep-blue)">Read more &rarr;</a>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Bottom Banner / Consultation CTA -->
+      <svg
+        class="wave"
+        viewBox="0 0 1440 80"
+        preserveAspectRatio="none"
+        aria-hidden="true"
+        focusable="false"
+      >
+        <path
+          d="M0,40 C240,90 480,-10 720,30 C960,70 1200,10 1440,45 L1440,80 L0,80 Z"
+          fill="#081226"
+        />
+      </svg>
+      <section class="section dark">
+        <div class="wrap center">
+          <span class="eyebrow on-dark">Evidence-Led Water Solutions</span>
+          <h2>Have Questions About Your Water Quality?</h2>
+          <p class="lead" style="max-width: 60ch; margin: 0 auto 1.4rem">
+            Whether you are managing chronic borehole staining at home, scaling in commercial boilers, or designing an industrial membrane plant &mdash; our engineers are ready to analyze your source.
+          </p>
+          <div class="btn-row" style="justify-content: center">
+            <a class="btn" href="contact.html?subject=Request%20Assessment"><span>Request a Water Assessment</span></a>
+            <a class="btn ghost on-dark" href="training.html"><span>Explore Tovila Academy</span></a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <div class="f-grid">
+          <div>
+            <a class="logo" href="index.html" aria-label="Tovila Water Solutions home">
+              <img src="img/tovila-logo.jpg" alt="Tovila Water Solutions" class="logo-img" />
+            </a>
+            <p style="margin-top: 1rem; max-width: 34ch">
+              Complete water treatment, purification and water engineering solutions &mdash; engineered
+              around your source, application and budget.
+            </p>
+            <div class="socials">
+              <a href="#" aria-label="Tovila on LinkedIn">In</a>
+              <a href="#" aria-label="Tovila on Facebook">Fb</a>
+              <a href="#" aria-label="Tovila on Instagram">Ig</a>
+              <a href="#" aria-label="Tovila on X">X</a>
+            </div>
+            <p class="f-contact">
+              Tetegu Road, Tetegu, Accra, Ghana<br />
+              <a href="tel:+233552490684">+233 (0)55 249 0684</a><br />
+              <a href="mailto:info@tovilawatersolutions.com">info@tovilawatersolutions.com</a><br />
+              Mon&ndash;Fri 8am&ndash;6pm, Sat 9am&ndash;1pm
+            </p>
+          </div>
+          <div>
+            <h4>Solutions</h4>
+            <ul>
+              <li><a href="residential.html">Residential</a></li>
+              <li><a href="commercial.html">Commercial</a></li>
+              <li><a href="industrial.html">Industrial &amp; Institutional</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="projects.html">Projects</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Learn &amp; Company</h4>
+            <ul>
+              <li><a href="training.html">Training Academy</a></li>
+              <li><a href="knowledge-centre.html" aria-current="page">Knowledge Centre</a></li>
+              <li><a href="about.html">About Tovila</a></li>
+              <li><a href="csr.html">Community Impact</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Water notes newsletter</h4>
+            <p>
+              Practical water engineering notes for homes, businesses and plant operators. Monthly,
+              no sales noise.
+            </p>
+            <form class="news" data-simple>
+              <label class="microcopy" for="news-email" style="position: absolute; left: -9999px"
+                >Email address</label
+              >
+              <input id="news-email" type="email" placeholder="you@company.com" required />
+              <button class="btn sm" type="submit"><span>Join</span></button>
+            </form>
+            <p class="form-success">
+              Thanks &mdash; you are on the list. (Front-end only in Phase 1.)
+            </p>
+          </div>
+        </div>
+        <div class="f-bottom">
+          <span>&copy; 2026 Tovila Water Solutions</span>
+          <span>Accra, Ghana &middot; Engineering better water</span>
+        </div>
+      </div>
+    </footer>
+    <script src="js/main.js"></script>
+    <script src="js/water.js" defer></script>
+  </body>
+</html>

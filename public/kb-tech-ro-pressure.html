@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Why Does an RO System Lose Pressure? | Knowledge Centre | Tovila</title>
+    <meta
+      name="description"
+      content="A systematic stage-by-stage troubleshooting guide for technicians to isolate pressure drops across pre-filters, pumps, membranes, and valves."
+    />
+    <meta
+      property="og:title"
+      content="Why Does an RO System Lose Pressure? | Knowledge Centre | Tovila"
+    />
+    <meta
+      property="og:description"
+      content="A systematic stage-by-stage troubleshooting guide for technicians to isolate pressure drops across pre-filters, pumps, membranes, and valves."
+    />
+    <meta property="og:type" content="article" />
+    <link rel="canonical" href="https://tovilawatersolutions.com/kb-tech-ro-pressure.html" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/water.css" />
+    <style>
+      .article-wrap {
+        max-width: 820px;
+        margin: 0 auto;
+      }
+      .article-body h2 {
+        font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+        margin-top: 2.2rem;
+        margin-bottom: 0.8rem;
+      }
+      .article-body h3 {
+        font-size: 1.2rem;
+        margin-top: 1.6rem;
+        margin-bottom: 0.6rem;
+      }
+      .article-body p, .article-body li {
+        color: #2c3e50;
+        font-size: 1.05rem;
+        line-height: 1.7;
+      }
+      .callout {
+        border-left: 4px solid var(--brand-red);
+        background: rgba(156, 34, 54, 0.08);
+        border-radius: 0 12px 12px 0;
+        padding: 1.2rem 1.4rem;
+        margin: 1.6rem 0;
+      }
+      .callout h4 {
+        margin: 0 0 0.4rem;
+        font-family: var(--display);
+        color: var(--ink);
+      }
+      .breadcrumb {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-family: var(--mono);
+        font-size: 0.72rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        margin-bottom: 1.2rem;
+        color: rgba(255, 255, 255, 0.75);
+      }
+      .breadcrumb a {
+        color: var(--red-bright);
+        text-decoration: none;
+      }
+      .breadcrumb a:hover {
+        text-decoration: underline;
+      }
+      .gauge-flow {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        margin: 1.6rem 0;
+      }
+      @media (max-width: 768px) {
+        .gauge-flow {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="scroll-progress" aria-hidden="true"></div>
+    <header class="site-nav">
+      <div class="wrap nav-inner">
+        <a class="logo" href="index.html" aria-label="Tovila Water Solutions home">
+          <img src="img/tovila-logo.jpg" alt="Tovila Water Solutions" class="logo-img" />
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li class="drop">
+            <button class="drop-toggle" type="button">Solutions</button>
+            <ul class="drop-menu">
+              <li><a href="residential.html">Residential</a></li>
+              <li><a href="commercial.html">Commercial</a></li>
+              <li><a href="industrial.html">Industrial &amp; Institutional</a></li>
+              <li><a href="services.html">Services</a></li>
+            </ul>
+          </li>
+          <li class="drop">
+            <button class="drop-toggle" type="button">Learn</button>
+            <ul class="drop-menu">
+              <li><a href="training.html">Training</a></li>
+              <li><a href="knowledge-centre.html" aria-current="page">Knowledge Centre</a></li>
+            </ul>
+          </li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="csr.html">CSR</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li>
+            <a class="btn sm nav-cta" href="contact.html?subject=Request%20Assessment"
+              ><span>Request a Water Assessment</span></a
+            >
+          </li>
+        </ul>
+        <button
+          class="hamburger"
+          type="button"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <div id="mobile-menu" role="dialog" aria-modal="true" aria-label="Site menu">
+      <div class="m-top">
+        <a class="logo" href="index.html" aria-label="Tovila Water Solutions home">
+          <img src="img/tovila-logo.jpg" alt="Tovila Water Solutions" class="logo-img" />
+        </a>
+        <button class="m-close" type="button">Close</button>
+      </div>
+      <nav>
+        <a href="index.html">Home</a><a href="projects.html">Projects</a><a href="csr.html">CSR</a
+        ><a href="about.html">About</a><a href="contact.html">Contact</a>
+        <p class="m-group">Solutions</p>
+        <a href="residential.html">Residential</a><a href="commercial.html">Commercial</a
+        ><a href="industrial.html">Industrial &amp; Institutional</a
+        ><a href="services.html">Services</a>
+        <p class="m-group">Learn</p>
+        <a href="training.html">Training</a
+        ><a href="knowledge-centre.html" aria-current="page">Knowledge Centre</a>
+        <p class="m-group">&nbsp;</p>
+        <a class="btn" href="contact.html?subject=Request%20Assessment"
+          ><span>Request a Water Assessment</span></a
+        >
+      </nav>
+    </div>
+
+    <main id="main-content">
+      <!-- Banner -->
+      <section class="banner-x red" style="background: linear-gradient(150deg, #05090f 0%, var(--ink) 45%, var(--brand-red) 100%);">
+        <div class="bmedia">
+          <img
+            src="img/service-technician.jpg"
+            width="1440"
+            height="960"
+            alt="Water treatment service technician checking pressure gauges on an RO skid"
+          />
+        </div>
+        <canvas class="wcanvas" aria-hidden="true"></canvas>
+        <div class="wrap">
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="knowledge-centre.html">Knowledge Centre</a>
+            <span aria-hidden="true">&rarr;</span>
+            <span style="color: var(--red-bright)">Technicians</span>
+            <span aria-hidden="true">&rarr;</span>
+            <span style="color: #fff">RO Pressure Diagnostics</span>
+          </nav>
+          <span class="kicker" style="color: var(--red-bright)">Technicians &bull; Plant Troubleshooting</span>
+          <h1>Why Does an RO System Lose Pressure?</h1>
+          <p class="lead">
+            In reverse osmosis plants, pressure is the prime mover that forces pure water through the semi-permeable membrane barrier. When pressure collapses or differential pressure spikes, here is how technicians diagnose the root cause sequentially.
+          </p>
+        </div>
+      </section>
+
+      <svg
+        class="wave"
+        viewBox="0 0 1440 80"
+        preserveAspectRatio="none"
+        aria-hidden="true"
+        focusable="false"
+      >
+        <path
+          d="M0,40 C240,90 480,-10 720,30 C960,70 1200,10 1440,45 L1440,80 L0,80 Z"
+          fill="#ffffff"
+        />
+      </svg>
+
+      <!-- Article Body -->
+      <article class="section">
+        <div class="wrap article-wrap">
+          <div class="article-body">
+            <p class="lead" style="color: var(--ink); font-size: 1.15rem; font-weight: 500">
+              When a commercial or industrial Reverse Osmosis (RO) skid triggers a low-pressure fault or suffers an unexplained drop in permeate flow, amateur operators often adjust the bypass needle valve or crank up pump speed. This is dangerous and can quickly destroy the membrane elements.
+            </p>
+            <p>
+              In water engineering, pressure loss is never random &mdash; it is an empirical symptom of hydraulic restriction, mechanical wear, or membrane surface resistance. Experienced technicians follow a disciplined sequential diagnostic workflow rather than guessing.
+            </p>
+
+            <h2>The Seven Primary Causes of RO Pressure Loss</h2>
+            <ol style="padding-left: 1.4rem; line-height: 1.8; margin-bottom: 1.6rem">
+              <li>
+                <strong>Clogged Pre-treatment Cartridges:</strong> High differential pressure (&Delta;P) across sediment or carbon filter housings starves the high-pressure booster pump intake of water, causing suction cavitation.
+              </li>
+              <li>
+                <strong>Fouled or Scaled Membrane Elements:</strong> Inorganic mineral precipitation (calcium carbonate/sulfate) or organic biofilm increases hydraulic resistance, choking cross-flow velocity.
+              </li>
+              <li>
+                <strong>Booster Pump Impeller Wear or Cavitation Damage:</strong> Erosion of stainless steel impellers or worn mechanical seals reducing pump head output.
+              </li>
+              <li>
+                <strong>Low Feed Supply Pressure:</strong> Insufficient pressure from municipal mains or raw water transfer pumps failing to meet the minimum Net Positive Suction Head (NPSH) required by the RO skid.
+              </li>
+              <li>
+                <strong>Partially Closed, Throttled, or Seized Valves:</strong> A manual ball valve accidentally knocked off-position, or an inlet solenoid valve failing to open fully due to coil burnout or sediment jamming.
+              </li>
+              <li>
+                <strong>Air Locks in High-Pressure Piping:</strong> Entrapped air bubbles in pump heads or membrane vessel manifolds causing erratic pressure oscillations and false low-pressure trips.
+              </li>
+              <li>
+                <strong>Failed or Leaking Check Valves:</strong> Permeate back-pressure check valves leaking, allowing pressurized product water or concentrate to short-circuit.
+              </li>
+            </ol>
+
+            <h2>The Sequential Gauge Diagnostic Protocol</h2>
+            <p>
+              Do not adjust control valves until you have recorded readings across every pressure gauge in sequence from the raw feed line to the concentrate outlet:
+            </p>
+
+            <div class="gauge-flow">
+              <div class="card pad-l a-training">
+                <span class="accent-bar" style="background: var(--brand-red)"></span>
+                <span class="mono" style="color: var(--brand-red)">Stage 01</span>
+                <h3>Feed Inlet Gauge</h3>
+                <p>Measures raw water supply pressure upstream of the 5-micron pre-filter. Must meet skid minimum (typically 30&ndash;45 PSI / 2&ndash;3 bar).</p>
+              </div>
+              <div class="card pad-l a-training">
+                <span class="accent-bar" style="background: var(--brand-red)"></span>
+                <span class="mono" style="color: var(--brand-red)">Stage 02</span>
+                <h3>Post-Cartridge Gauge</h3>
+                <p>Measures pressure leaving the cartridge housing. Calculate &Delta;P = (Stage 1 &minus; Stage 2). If &Delta;P &gt; 15 PSI (1.0 bar), replace cartridges immediately.</p>
+              </div>
+              <div class="card pad-l a-training">
+                <span class="accent-bar" style="background: var(--brand-red)"></span>
+                <span class="mono" style="color: var(--brand-red)">Stage 03</span>
+                <h3>Pump Discharge Gauge</h3>
+                <p>Measures operating pressure delivered to membrane vessels. Verify reading against design pump curve and motor VFD frequency.</p>
+              </div>
+            </div>
+
+            <div class="callout">
+              <h4>Understanding &Delta;P (Differential Pressure)</h4>
+              <p style="margin: 0; font-size: 0.95rem">
+                Differential pressure (&Delta;P) is the pressure drop across a membrane vessel or array:
+                <br />
+                <strong style="font-family: var(--mono); color: var(--brand-red)">&Delta;P = Feed Pressure &minus; Concentrate (Reject) Pressure</strong>
+                <br />
+                A normal &Delta;P for a clean multi-element pressure vessel is typically 15 to 25 PSI (1.0 to 1.7 bar). If &Delta;P rises by 15% to 20% above baseline commissioning value, the feed spacers are fouling with silt, bio-slime, or mineral scale.
+              </p>
+            </div>
+
+            <h2>Step-by-Step Isolation Checklist</h2>
+            <p>
+              Follow this procedure when troubleshooting on-site:
+            </p>
+            <ul class="bullets" style="padding-left: 1.4rem; margin-bottom: 1.4rem">
+              <li>
+                <strong>Step 1: Check the Cartridge Filter &Delta;P.</strong> If the pressure drop across the 5-micron pre-filter exceeds 10&ndash;15 PSI, the booster pump is starved. Replace the cartridge element before testing further.
+              </li>
+              <li>
+                <strong>Step 2: Inspect the Low-Pressure Cut-off Switch.</strong> Most RO plants feature an automated low-pressure switch (typically set between 15 and 25 PSI) to protect the high-pressure pump from running dry. Check wiring and calibration.
+              </li>
+              <li>
+                <strong>Step 3: Listen for Pump Cavitation.</strong> A pump that sounds like it is pumping marbles or gravel is cavitating &mdash; vapor bubbles are imploding against the impeller. This confirms starvation from upstream restrictions.
+              </li>
+              <li>
+                <strong>Step 4: Check Vessel Inter-Stage Pressures.</strong> In a two-stage RO system (e.g. 2:1 vessel array), compare Stage 1 &Delta;P against Stage 2 &Delta;P. If Stage 1 &Delta;P is elevated, the cause is colloidal silt or biofouling. If Stage 2 &Delta;P is elevated, the cause is mineral scaling in the concentrate stream.
+              </li>
+              <li>
+                <strong>Step 5: Inspect Concentrate Needle Valve.</strong> Throttling valves can accumulate grit or antiscalant precipitates, causing false concentrate back-pressures or flow restrictions.
+              </li>
+            </ul>
+
+            <h2>Preventative Best Practices for Plant Operators</h2>
+            <p>
+              Accurate daily operational logs are the technician&rsquo;s most powerful diagnostic tool. Record feed pressure, post-filter pressure, pump discharge pressure, concentrate pressure, permeate flow, concentrate flow, and temperature at the exact same hour each day.
+            </p>
+            <p>
+              Normalizing your data (adjusting for temperature and feed TDS fluctuations) allows you to detect pressure drops and membrane fouling weeks before the skid trips a mechanical fault.
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Related Section -->
+      <section class="section pale">
+        <div class="wrap">
+          <span class="eyebrow" style="color: var(--brand-red)">Practical Technical Training</span>
+          <h2>Build Hands-On Troubleshooting Skills</h2>
+          <div class="grid g2" style="margin-top: 1.6rem">
+            <div class="card pad-l a-training">
+              <span class="accent-bar" style="background: var(--brand-red)"></span>
+              <span class="mono" style="color: var(--brand-red); display: block; margin-bottom: 0.4rem">Practical Lab</span>
+              <h3>Hands-On RO Installation &amp; Maintenance</h3>
+              <p>
+                Train on real operating RO skids in our Tetegu workshop: master pressure profiling, pump curves, membrane replacement, and electrical interlocks.
+              </p>
+              <a class="more" href="training-hands-on-ro.html" style="color: var(--brand-red)">Explore Course &rarr;</a>
+            </div>
+            <div class="card pad-l a-training">
+              <span class="accent-bar" style="background: var(--brand-red)"></span>
+              <span class="mono" style="color: var(--brand-red); display: block; margin-bottom: 0.4rem">Membrane Science</span>
+              <h3>RO Membrane Fouling: Causes &amp; Prevention</h3>
+              <p>
+                Dive into mineral scaling, organic fouling, bio-slime, and Clean-in-Place (CIP) chemical wash procedures for field technicians.
+              </p>
+              <a class="more" href="kb-tech-membrane-fouling.html" style="color: var(--brand-red)">Read Fouling Guide &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <svg
+        class="wave"
+        viewBox="0 0 1440 80"
+        preserveAspectRatio="none"
+        aria-hidden="true"
+        focusable="false"
+      >
+        <path
+          d="M0,40 C240,90 480,-10 720,30 C960,70 1200,10 1440,45 L1440,80 L0,80 Z"
+          fill="#081226"
+        />
+      </svg>
+      <section class="section dark">
+        <div class="wrap center">
+          <span class="eyebrow on-dark">Academy Masterclass</span>
+          <h2>Advance Your Membrane Plant Troubleshooting</h2>
+          <p class="lead" style="max-width: 60ch; margin: 0 auto 1.4rem">
+            Join Tovila&rsquo;s intensive hands-on workshops in Accra. Learn to troubleshoot, wire, calibrate, and service commercial and industrial RO systems from practicing water engineers.
+          </p>
+          <div class="btn-row" style="justify-content: center">
+            <a class="btn" href="training-hands-on-ro.html"><span>View Hands-On RO Course</span></a>
+            <a class="btn ghost on-dark" href="training.html"><span>Explore All Courses</span></a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <div class="f-grid">
+          <div>
+            <a class="logo" href="index.html" aria-label="Tovila Water Solutions home">
+              <img src="img/tovila-logo.jpg" alt="Tovila Water Solutions" class="logo-img" />
+            </a>
+            <p style="margin-top: 1rem; max-width: 34ch">
+              Complete water treatment, purification and water engineering solutions &mdash; engineered
+              around your source, application and budget.
+            </p>
+            <div class="socials">
+              <a href="#" aria-label="Tovila on LinkedIn">In</a>
+              <a href="#" aria-label="Tovila on Facebook">Fb</a>
+              <a href="#" aria-label="Tovila on Instagram">Ig</a>
+              <a href="#" aria-label="Tovila on X">X</a>
+            </div>
+            <p class="f-contact">
+              Tetegu Road, Tetegu, Accra, Ghana<br />
+              <a href="tel:+233552490684">+233 (0)55 249 0684</a><br />
+              <a href="mailto:info@tovilawatersolutions.com">info@tovilawatersolutions.com</a><br />
+              Mon&ndash;Fri 8am&ndash;6pm, Sat 9am&ndash;1pm
+            </p>
+          </div>
+          <div>
+            <h4>Solutions</h4>
+            <ul>
+              <li><a href="residential.html">Residential</a></li>
+              <li><a href="commercial.html">Commercial</a></li>
+              <li><a href="industrial.html">Industrial &amp; Institutional</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="projects.html">Projects</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Learn &amp; Company</h4>
+            <ul>
+              <li><a href="training.html">Training Academy</a></li>
+              <li><a href="knowledge-centre.html" aria-current="page">Knowledge Centre</a></li>
+              <li><a href="about.html">About Tovila</a></li>
+              <li><a href="csr.html">Community Impact</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Water notes newsletter</h4>
+            <p>
+              Practical water engineering notes for homes, businesses and plant operators. Monthly,
+              no sales noise.
+            </p>
+            <form class="news" data-simple>
+              <label class="microcopy" for="news-email" style="position: absolute; left: -9999px"
+                >Email address</label
+              >
+              <input id="news-email" type="email" placeholder="you@company.com" required />
+              <button class="btn sm" type="submit"><span>Join</span></button>
+            </form>
+            <p class="form-success">
+              Thanks &mdash; you are on the list. (Front-end only in Phase 1.)
+            </p>
+          </div>
+        </div>
+        <div class="f-bottom">
+          <span>&copy; 2026 Tovila Water Solutions</span>
+          <span>Accra, Ghana &middot; Engineering better water</span>
+        </div>
+      </div>
+    </footer>
+    <script src="js/main.js"></script>
+    <script src="js/water.js" defer></script>
+  </body>
+</html>

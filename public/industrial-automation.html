@@ -1,0 +1,431 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Industrial Automation &amp; PLC Systems | Tovila Water Solutions Ghana</title>
+    <meta
+      name="description"
+      content="Instrumentation, PLC control logic, automated backwash sequences, and SCADA monitoring for industrial water treatment in Ghana."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/water.css" />
+  </head>
+  <body>
+    <div id="scroll-progress" aria-hidden="true"></div>
+    <header class="site-nav">
+      <div class="wrap nav-inner">
+        <a class="logo" href="index.html" aria-label="Tovila Water Solutions home">
+          <img src="img/tovila-logo.jpg" alt="Tovila Water Solutions" class="logo-img" />
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li class="drop">
+            <button class="drop-toggle" type="button">Solutions</button>
+            <ul class="drop-menu">
+              <li><a href="residential.html">Residential</a></li>
+              <li><a href="commercial.html">Commercial</a></li>
+              <li>
+                <a href="industrial.html" aria-current="page">Industrial &amp; Institutional</a>
+              </li>
+              <li><a href="services.html">Services</a></li>
+            </ul>
+          </li>
+          <li class="drop">
+            <button class="drop-toggle" type="button">Learn</button>
+            <ul class="drop-menu">
+              <li><a href="training.html">Training</a></li>
+              <li><a href="knowledge-centre.html">Knowledge Centre</a></li>
+            </ul>
+          </li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="csr.html">CSR</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li>
+            <a class="btn sm nav-cta" href="contact.html?subject=Request%20Assessment"
+              ><span>Request a Water Assessment</span></a
+            >
+          </li>
+        </ul>
+        <button
+          class="hamburger"
+          type="button"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <div id="mobile-menu" role="dialog" aria-modal="true" aria-label="Site menu">
+      <div class="m-top">
+        <a class="logo" href="index.html" aria-label="Tovila Water Solutions home">
+          <img src="img/tovila-logo.jpg" alt="Tovila Water Solutions" class="logo-img" />
+        </a>
+        <button class="m-close" type="button">Close</button>
+      </div>
+      <nav>
+        <a href="index.html">Home</a><a href="projects.html">Projects</a><a href="csr.html">CSR</a>
+        <a href="about.html">About</a><a href="contact.html">Contact</a>
+        <p class="m-group">Solutions</p>
+        <a href="residential.html">Residential</a><a href="commercial.html">Commercial</a>
+        <a href="industrial.html" aria-current="page">Industrial &amp; Institutional</a>
+        <a href="services.html">Services</a>
+        <p class="m-group">Learn</p>
+        <a href="training.html">Training</a><a href="knowledge-centre.html">Knowledge Centre</a>
+        <p class="m-group">&nbsp;</p>
+        <a class="btn" href="contact.html?subject=Request%20Assessment"
+          ><span>Request a Water Assessment</span></a
+        >
+      </nav>
+    </div>
+
+    <main>
+      <!-- Hero Banner -->
+      <section class="banner-x">
+        <div class="bmedia">
+          <img
+            src="img/commercial-plantroom.jpg"
+            width="1440"
+            height="960"
+            alt="PLC control panel and telemetry instrumentation enclosure"
+          />
+        </div>
+        <canvas class="wcanvas" aria-hidden="true"></canvas>
+        <div class="wrap">
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="industrial.html">Industrial &amp; Institutional</a>
+            <span class="sep" aria-hidden="true">&rarr;</span>
+            <span class="curr" aria-current="page">Automation &amp; PLC</span>
+          </nav>
+          <span class="kicker" style="color: #68b2db">Industrial &amp; Institutional</span>
+          <h1>Industrial Automation &amp; PLC Control</h1>
+          <p class="lead">
+            Instrumentation, deterministic control logic, automated valve sequencing, and supervisory
+            monitoring that eliminate manual operator error and protect critical plant assets.
+          </p>
+          <div class="btn-row">
+            <a class="btn" href="contact.html?subject=Technical%20Support" data-entry="industrial"
+              ><span>Talk to our engineering team</span></a
+            >
+            <a class="btn ghost on-dark" href="#details"><span>Explore Control Architecture</span></a>
+          </div>
+        </div>
+      </section>
+
+      <svg
+        class="wave"
+        viewBox="0 0 1440 80"
+        preserveAspectRatio="none"
+        aria-hidden="true"
+        focusable="false"
+      >
+        <path
+          d="M0,40 C240,90 480,-10 720,30 C960,70 1200,10 1440,45 L1440,80 L0,80 Z"
+          fill="#ffffff"
+        />
+      </svg>
+
+      <!-- Removing Manual Guesswork Section -->
+      <section class="section" id="details">
+        <div class="wrap">
+          <div class="split">
+            <div>
+              <span class="eyebrow">Deterministic Control</span>
+              <h2>Eliminating Manual Operator Subjectivity</h2>
+              <p>
+                Manual valve adjustments, irregular filter backwashes, and visual dosing estimates are the
+                predominant root causes of industrial water plant failures. When an operator forgets to backwash
+                a multimedia vessel, differential pressure crushes media beds or pushes turbidity downstream into
+                expensive reverse osmosis membranes.
+              </p>
+              <p>
+                Tovila engineers water treatment automation that removes operator guesswork. Industrial
+                instrumentation — differential pressure cells, magnetic flow meters, toroidal conductivity
+                transmitters, and digital pH/ORP probes — feeds continuously into programmable logic controllers
+                (PLCs). The system automatically initiates backwashes, balances chemical dosing loops, alternates
+                duty pumps, and trips fail-safe isolation valves before out-of-spec water reaches downstream processes.
+              </p>
+            </div>
+            <div class="card a-industrial pad-l reveal">
+              <span class="accent-bar"></span>
+              <span class="mono" style="color: var(--deep-blue)">Hardware Robustness</span>
+              <h3>Industrial-Grade Architecture</h3>
+              <p>
+                Built on industry-proven PLC platforms housed in ingress-protected enclosures. Every control
+                panel features optical isolation, 24VDC control circuits, surge suppression, and intuitive human-machine
+                interfaces (HMIs) for clear plant status visibility.
+              </p>
+              <p class="hint" style="margin-top: 1rem">
+                Note: PLC manufacturer platform, I/O count, SCADA protocol compatibility, and telemetry modules
+                are determined during the engineering assessment for that site.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Key Automation Layers -->
+      <section class="section pale">
+        <div class="wrap">
+          <span class="eyebrow">Control Capabilities</span>
+          <h2>Integrated Automation Layers</h2>
+          <p class="lead">
+            Protecting pumps, membranes, and product quality through automated closed-loop control.
+          </p>
+
+          <div class="grid g2" style="margin-top: 2rem">
+            <div class="card a-industrial pad-l reveal">
+              <span class="accent-bar"></span>
+              <h3>Automated Backwash &amp; Rinse Cycles</h3>
+              <p>
+                Multimedia, carbon, and softening vessels initiate regeneration sequences based on differential
+                pressure thresholds or cumulative treated volume, preventing media channeling and compaction.
+              </p>
+              <ul class="bullets">
+                <li>Differential pressure transmitters across vessel heads trigger automated valve banks</li>
+                <li>Pneumatic or motorized actuated valve manifolds with limit switch feedback</li>
+                <li>Interlocked sequencing prevents multiple filters from backwashing simultaneously</li>
+              </ul>
+            </div>
+
+            <div class="card a-industrial pad-l reveal">
+              <span class="accent-bar"></span>
+              <h3>Dynamic Chemical Dosing Control</h3>
+              <p>
+                Proportional-integral-derivative (PID) feedback loops modulate chemical injection pumps based
+                on real-time flow pacing, pH correction, or chlorine oxidation-reduction potential (ORP).
+              </p>
+              <ul class="bullets">
+                <li>Digital metering pumps with 4-20mA speed modulation</li>
+                <li>Dual inline pH and conductivity measurement verification</li>
+                <li>Low-level chemical tank interlocks alert operators before run-out</li>
+              </ul>
+            </div>
+
+            <div class="card a-industrial pad-l reveal">
+              <span class="accent-bar"></span>
+              <h3>Pump Protection &amp; Duty Alternation</h3>
+              <p>
+                High-pressure and booster pumps are protected by hardware interlocks against dry running,
+                cavitation, thermal overload, and high discharge pressure deadheading.
+              </p>
+              <ul class="bullets">
+                <li>Vessel low-suction pressure switches and ultrasonic tank level cutoffs</li>
+                <li>Variable frequency drive (VFD) soft starting to eliminate hydraulic water hammer</li>
+                <li>Automated duty/standby lead-lag pump runtime balancing</li>
+              </ul>
+            </div>
+
+            <div class="card a-industrial pad-l reveal">
+              <span class="accent-bar"></span>
+              <h3>SCADA Integration &amp; Remote Telemetry</h3>
+              <p>
+                Local touch-panel HMIs provide graphic process flow visualization, while industrial telemetry
+                links plant data into centralized facility SCADA networks or secure remote monitoring dashboards.
+              </p>
+              <ul class="bullets">
+                <li>Standardized industrial protocols including Modbus TCP, Profinet, and Ethernet/IP</li>
+                <li>Historical trending of normalized flows, pressures, and conductivity metrics</li>
+                <li>Automated alarm dispatch via SMS and email for critical fault conditions</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Engineering Assurance -->
+      <section class="section">
+        <div class="wrap">
+          <div class="card a-industrial pad-l reveal" style="background: var(--paper)">
+            <span class="accent-bar"></span>
+            <span class="mono" style="color: var(--deep-blue)">Safety &amp; Compliance</span>
+            <h3>Fail-Safe Logic &amp; Emergency Shutdown Protocols</h3>
+            <p>
+              Tovila programs every control system with hardwired emergency stop safety relays and fail-closed
+              actuator logic. In the event of main power loss, air pressure drop, or out-of-spec conductivity,
+              motorized divert valves instantly isolate downstream distribution and vent high-pressure circuits,
+              safeguarding industrial assets from contamination.
+            </p>
+            <div style="margin-top: 1rem; padding: 0.9rem 1.2rem; background: var(--pale); border-radius: 8px;">
+              <span class="mono" style="font-size: 0.78rem; color: var(--deep-blue); text-transform: uppercase; letter-spacing: 0.08em; display: block; margin-bottom: 0.2rem">Site Specifics</span>
+              <p style="margin: 0; font-size: 0.92rem; color: #41546c">
+                Control panel enclosure IP ratings, PLC hardware specifications, sensor ranges, and HMI display
+                sizes are tailored during the engineering assessment for that site.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQs -->
+      <section class="section pale">
+        <div class="wrap">
+          <span class="eyebrow">Questions &amp; Answers</span>
+          <h2>Frequently Asked Questions</h2>
+          <div class="grid g2" style="margin-top: 1.8rem">
+            <div class="card a-industrial pad-l reveal">
+              <span class="accent-bar"></span>
+              <h3>Can this integrate with our existing plant control systems?</h3>
+              <p>
+                Yes. Control architecture is designed to integrate into existing plant SCADA, DCS, or building
+                management systems (BMS). We support standard industrial fieldbuses including Modbus TCP, Profinet,
+                and Ethernet/IP, with tag maps defined during detailed engineering design.
+              </p>
+            </div>
+            <div class="card a-industrial pad-l reveal">
+              <span class="accent-bar"></span>
+              <h3>Does this include remote monitoring?</h3>
+              <p>
+                Remote monitoring capability is part of our standard automation scope. Facilities can monitor
+                transmembrane pressures, flow rates, water quality trends, and active alarms remotely via secure
+                cloud gateways or local network clients.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Cross Links -->
+      <section class="section">
+        <div class="wrap">
+          <span class="eyebrow">Related Industrial Capabilities</span>
+          <h2>Explore Connected Industrial Solutions</h2>
+          <p class="lead">
+            Discover how automation controls major water infrastructure:
+          </p>
+          <div class="grid g2" style="margin-top: 1.6rem">
+            <div class="card a-industrial pad-l reveal">
+              <span class="accent-bar"></span>
+              <span class="mono" style="color: var(--deep-blue)">Complete Plant Infrastructure</span>
+              <h3>Water Treatment Plants</h3>
+              <p>
+                Full plant design, pre-treatment skid integration, installation, and commissioning.
+              </p>
+              <a class="more" href="industrial-treatment-plants.html">Explore Treatment Plants &rarr;</a>
+            </div>
+            <div class="card a-industrial pad-l reveal">
+              <span class="accent-bar"></span>
+              <span class="mono" style="color: var(--deep-blue)">Membrane Protection</span>
+              <h3>Industrial RO</h3>
+              <p>
+                Capacity-matched reverse osmosis membrane trains governed by automated CIP and flush sequences.
+              </p>
+              <a class="more" href="industrial-ro.html">Explore Industrial RO &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <svg
+        class="wave"
+        viewBox="0 0 1440 80"
+        preserveAspectRatio="none"
+        aria-hidden="true"
+        focusable="false"
+      >
+        <path
+          d="M0,40 C240,90 480,-10 720,30 C960,70 1200,10 1440,45 L1440,80 L0,80 Z"
+          fill="#081226"
+        />
+      </svg>
+      <section class="section dark">
+        <div class="wrap center">
+          <span class="eyebrow on-dark">Next Step</span>
+          <h2>Talk to Our Engineering Team</h2>
+          <p class="lead" style="max-width: 60ch; margin: 0 auto 1.8rem">
+            Eliminate manual intervention from your water treatment operations. Discuss your plant instrumentation,
+            PLC preferences, and supervisory control requirements with Tovila engineers.
+          </p>
+          <div class="btn-row" style="justify-content: center">
+            <a class="btn" href="contact.html?subject=Technical%20Support" data-entry="industrial"
+              ><span>Talk to our engineering team</span></a
+            >
+            <a class="btn ghost on-dark" href="industrial.html"><span>Back to Industrial Overview</span></a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <div class="f-grid">
+          <div>
+            <a class="logo" href="index.html" aria-label="Tovila Water Solutions home">
+              <img src="img/tovila-logo.jpg" alt="Tovila Water Solutions" class="logo-img" />
+            </a>
+            <p style="margin-top: 1rem; max-width: 34ch">
+              Complete water treatment, purification and water engineering solutions — engineered
+              around your source, application and budget.
+            </p>
+            <div class="socials">
+              <a href="#" aria-label="Tovila on LinkedIn">In</a>
+              <a href="#" aria-label="Tovila on Facebook">Fb</a>
+              <a href="#" aria-label="Tovila on Instagram">Ig</a>
+              <a href="#" aria-label="Tovila on X">X</a>
+            </div>
+            <p class="f-contact">
+              Tetegu Road, Tetegu, Accra, Ghana<br />
+              <a href="tel:+233552490684">+233 (0)55 249 0684</a><br />
+              <a href="mailto:info@tovilawatersolutions.com">info@tovilawatersolutions.com</a><br />
+              Mon&ndash;Fri 8am&ndash;6pm, Sat 9am&ndash;1pm
+            </p>
+          </div>
+          <div>
+            <h4>Solutions</h4>
+            <ul>
+              <li><a href="residential.html">Residential</a></li>
+              <li><a href="commercial.html">Commercial</a></li>
+              <li><a href="industrial.html">Industrial &amp; Institutional</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="projects.html">Projects</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Learn &amp; Company</h4>
+            <ul>
+              <li><a href="training.html">Training Academy</a></li>
+              <li><a href="knowledge-centre.html">Knowledge Centre</a></li>
+              <li><a href="about.html">About Tovila</a></li>
+              <li><a href="csr.html">Community Impact</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Water notes newsletter</h4>
+            <p>
+              Practical water engineering notes for homes, businesses and plant operators. Monthly,
+              no sales noise.
+            </p>
+            <form class="news" data-simple>
+              <label class="microcopy" for="news-email" style="position: absolute; left: -9999px"
+                >Email address</label
+              >
+              <input id="news-email" type="email" placeholder="you@company.com" required />
+              <button class="btn sm" type="submit"><span>Join</span></button>
+            </form>
+            <p class="form-success">
+              Thanks &mdash; you are on the list. (Front-end only in Phase 1.)
+            </p>
+          </div>
+        </div>
+        <div class="f-bottom">
+          <span>&copy; 2026 Tovila Water Solutions</span>
+          <span>Accra, Ghana &middot; Engineering better water</span>
+        </div>
+      </div>
+    </footer>
+    <script src="js/main.js"></script>
+    <script src="js/water.js" defer></script>
+  </body>
+</html>

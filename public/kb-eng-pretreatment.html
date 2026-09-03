@@ -1,0 +1,434 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pre-Treatment for Industrial Membrane Systems | Knowledge Centre | Tovila</title>
+    <meta
+      name="description"
+      content="An engineering guide to multi-barrier pre-treatment design: coagulation, depth filtration, iron oxidation, dechlorination, antiscalants, and ultrafiltration."
+    />
+    <meta
+      property="og:title"
+      content="Pre-Treatment for Industrial Membrane Systems | Knowledge Centre | Tovila"
+    />
+    <meta
+      property="og:description"
+      content="An engineering guide to multi-barrier pre-treatment design: coagulation, depth filtration, iron oxidation, dechlorination, antiscalants, and ultrafiltration."
+    />
+    <meta property="og:type" content="article" />
+    <link rel="canonical" href="https://tovilawatersolutions.com/kb-eng-pretreatment.html" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/water.css" />
+    <style>
+      .article-wrap {
+        max-width: 820px;
+        margin: 0 auto;
+      }
+      .article-body h2 {
+        font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+        margin-top: 2.2rem;
+        margin-bottom: 0.8rem;
+      }
+      .article-body h3 {
+        font-size: 1.2rem;
+        margin-top: 1.6rem;
+        margin-bottom: 0.6rem;
+      }
+      .article-body p, .article-body li {
+        color: #2c3e50;
+        font-size: 1.05rem;
+        line-height: 1.7;
+      }
+      .callout {
+        border-left: 4px solid var(--deep-blue);
+        background: rgba(7, 43, 74, 0.08);
+        border-radius: 0 12px 12px 0;
+        padding: 1.2rem 1.4rem;
+        margin: 1.6rem 0;
+      }
+      .callout h4 {
+        margin: 0 0 0.4rem;
+        font-family: var(--display);
+        color: var(--ink);
+      }
+      .breadcrumb {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-family: var(--mono);
+        font-size: 0.72rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        margin-bottom: 1.2rem;
+        color: rgba(255, 255, 255, 0.75);
+      }
+      .breadcrumb a {
+        color: #79b5dc;
+        text-decoration: none;
+      }
+      .breadcrumb a:hover {
+        text-decoration: underline;
+      }
+      .barrier-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.2rem;
+        margin: 1.6rem 0;
+      }
+      @media (max-width: 768px) {
+        .barrier-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="scroll-progress" aria-hidden="true"></div>
+    <header class="site-nav">
+      <div class="wrap nav-inner">
+        <a class="logo" href="index.html" aria-label="Tovila Water Solutions home">
+          <img src="img/tovila-logo.jpg" alt="Tovila Water Solutions" class="logo-img" />
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li class="drop">
+            <button class="drop-toggle" type="button">Solutions</button>
+            <ul class="drop-menu">
+              <li><a href="residential.html">Residential</a></li>
+              <li><a href="commercial.html">Commercial</a></li>
+              <li><a href="industrial.html">Industrial &amp; Institutional</a></li>
+              <li><a href="services.html">Services</a></li>
+            </ul>
+          </li>
+          <li class="drop">
+            <button class="drop-toggle" type="button">Learn</button>
+            <ul class="drop-menu">
+              <li><a href="training.html">Training</a></li>
+              <li><a href="knowledge-centre.html" aria-current="page">Knowledge Centre</a></li>
+            </ul>
+          </li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="csr.html">CSR</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li>
+            <a class="btn sm nav-cta" href="contact.html?subject=Request%20Assessment"
+              ><span>Request a Water Assessment</span></a
+            >
+          </li>
+        </ul>
+        <button
+          class="hamburger"
+          type="button"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <div id="mobile-menu" role="dialog" aria-modal="true" aria-label="Site menu">
+      <div class="m-top">
+        <a class="logo" href="index.html" aria-label="Tovila Water Solutions home">
+          <img src="img/tovila-logo.jpg" alt="Tovila Water Solutions" class="logo-img" />
+        </a>
+        <button class="m-close" type="button">Close</button>
+      </div>
+      <nav>
+        <a href="index.html">Home</a><a href="projects.html">Projects</a><a href="csr.html">CSR</a
+        ><a href="about.html">About</a><a href="contact.html">Contact</a>
+        <p class="m-group">Solutions</p>
+        <a href="residential.html">Residential</a><a href="commercial.html">Commercial</a
+        ><a href="industrial.html">Industrial &amp; Institutional</a
+        ><a href="services.html">Services</a>
+        <p class="m-group">Learn</p>
+        <a href="training.html">Training</a
+        ><a href="knowledge-centre.html" aria-current="page">Knowledge Centre</a>
+        <p class="m-group">&nbsp;</p>
+        <a class="btn" href="contact.html?subject=Request%20Assessment"
+          ><span>Request a Water Assessment</span></a
+        >
+      </nav>
+    </div>
+
+    <main id="main-content">
+      <!-- Banner -->
+      <section class="banner-x" style="background: linear-gradient(150deg, #020b14 0%, var(--ink) 45%, var(--deep-blue) 100%);">
+        <div class="bmedia">
+          <img
+            src="img/industrial-facility.jpg"
+            width="1440"
+            height="960"
+            alt="Multi-media depth filtration and pre-treatment vessels in an industrial facility"
+          />
+        </div>
+        <canvas class="wcanvas" aria-hidden="true"></canvas>
+        <div class="wrap">
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="knowledge-centre.html">Knowledge Centre</a>
+            <span aria-hidden="true">&rarr;</span>
+            <span style="color: #79b5dc">Engineers</span>
+            <span aria-hidden="true">&rarr;</span>
+            <span style="color: #fff">Pre-Treatment</span>
+          </nav>
+          <span class="kicker" style="color: #79b5dc">Industrial &bull; Pre-Treatment Engineering</span>
+          <h1>Pre-Treatment for Industrial Membrane Systems</h1>
+          <p class="lead">
+            Reverse osmosis membranes are precision molecular separation barriers, not filters for gross particulate matter. Every dollar invested in high-efficiency pre-treatment protects ten dollars in capital membrane assets and chemical cleaning downtime.
+          </p>
+        </div>
+      </section>
+
+      <svg
+        class="wave"
+        viewBox="0 0 1440 80"
+        preserveAspectRatio="none"
+        aria-hidden="true"
+        focusable="false"
+      >
+        <path
+          d="M0,40 C240,90 480,-10 720,30 C960,70 1200,10 1440,45 L1440,80 L0,80 Z"
+          fill="#ffffff"
+        />
+      </svg>
+
+      <!-- Article Body -->
+      <article class="section">
+        <div class="wrap article-wrap">
+          <div class="article-body">
+            <p class="lead" style="color: var(--ink); font-size: 1.15rem; font-weight: 500">
+              In membrane plant design, the adage is absolute: <em>The success of a reverse osmosis plant is 90% determined before water ever reaches the high-pressure pump.</em> If pre-treatment fails, the RO skid will experience chronic flux decline, premature element replacement, and high operating costs regardless of membrane brand.
+            </p>
+
+            <h2>The Multi-Barrier Pre-Treatment Architecture</h2>
+            <p>
+              Depending on raw feed source (surface river, coastal borehole, or industrial effluent), industrial pre-treatment utilizes a synchronized combination of unit processes:
+            </p>
+
+            <div class="barrier-grid">
+              <div class="card pad-l a-industrial">
+                <span class="accent-bar" style="background: var(--deep-blue)"></span>
+                <span class="mono" style="color: var(--deep-blue)">Barrier 01</span>
+                <h3>Coagulation &amp; Flocculation</h3>
+                <p>
+                  Destabilizes colloidal clay, silica sols, and humic macromolecules using Polyaluminium Chloride (PAC) or ferric salts, followed by gentle flocculation to form settleable pin-floc.
+                </p>
+              </div>
+              <div class="card pad-l a-industrial">
+                <span class="accent-bar" style="background: var(--deep-blue)"></span>
+                <span class="mono" style="color: var(--deep-blue)">Barrier 02</span>
+                <h3>Granular Depth Filtration</h3>
+                <p>
+                  Pressurized multi-media filters (anthracite, quartz sand, and garnet gravel) providing true deep-bed particle capture down to 10&ndash;15 microns with air-scour backwash cycles.
+                </p>
+              </div>
+              <div class="card pad-l a-industrial">
+                <span class="accent-bar" style="background: var(--deep-blue)"></span>
+                <span class="mono" style="color: var(--deep-blue)">Barrier 03</span>
+                <h3>Catalytic Iron &amp; Manganese Removal</h3>
+                <p>
+                  Chemical pre-oxidation followed by catalytic media filtration (Greensand Plus or manganese dioxide) to drive dissolved Fe and Mn below 0.05 mg/L before membrane contact.
+                </p>
+              </div>
+              <div class="card pad-l a-industrial">
+                <span class="accent-bar" style="background: var(--deep-blue)"></span>
+                <span class="mono" style="color: var(--deep-blue)">Barrier 04</span>
+                <h3>Total Dechlorination</h3>
+                <p>
+                  Thin-film composite (TFC) polyamide membranes have near-zero chlorine tolerance. Granular Activated Carbon (GAC) beds or Sodium Metabisulfite (SMBS) dosing eliminates all free halogens.
+                </p>
+              </div>
+            </div>
+
+            <h2>Critical Pre-Treatment Threshold Parameters</h2>
+            <p>
+              The engineer must design pre-treatment systems to guarantee that feed water entering the RO skid meets these strict manufacturer warranties:
+            </p>
+            <div class="callout">
+              <h4>Feed Water Quality Limits for Polyamide RO Elements</h4>
+              <ul style="margin: 0; padding-left: 1.2rem; font-size: 0.95rem; line-height: 1.8">
+                <li><strong>Silt Density Index (SDI<sub>15</sub>):</strong> &lt; 3.0 (Maximum allowable: 5.0)</li>
+                <li><strong>Turbidity:</strong> &lt; 0.2 NTU (Maximum allowable: 1.0 NTU)</li>
+                <li><strong>Free Chlorine (Cl<sub>2</sub>):</strong> &lt; 0.1 mg/L (Continuous exposure limit &lt; 0.02 mg/L; max tolerance 1,000 ppm-hours)</li>
+                <li><strong>Total Dissolved Iron (Fe):</strong> &lt; 0.05 mg/L</li>
+                <li><strong>Total Manganese (Mn):</strong> &lt; 0.02 mg/L</li>
+                <li><strong>Oil and Grease:</strong> 0.0 mg/L (Undetectable; hydrocarbons irreversibly coat polyamide sheets)</li>
+                <li><strong>Oxidation-Reduction Potential (ORP):</strong> &lt; 250 &ndash; 300 mV (confirms total absence of oxidizing halogens)</li>
+              </ul>
+            </div>
+
+            <h2>Dechlorination Chemistry: GAC vs. Sodium Metabisulfite (SMBS)</h2>
+            <p>
+              Free chlorine oxidizes the amide nitrogen bonds in polyamide membranes, permanently breaking cross-linked polymers and destroying salt rejection. Two methods are used to achieve complete dechlorination:
+            </p>
+
+            <h3>Option A: Granular Activated Carbon (GAC) Beds</h3>
+            <p>
+              GAC removes chlorine through catalytic reduction (adsorbing hypochlorous acid and releasing chloride ions and carbon oxides). It requires no daily chemical preparation and provides organic adsorption. However, warm GAC beds in tropical climates like Ghana become breeding grounds for bacteria, transforming an inorganic chlorine problem into a severe downstream biofouling problem unless routinely steamed or sanitized.
+            </p>
+
+            <h3>Option B: Chemical Sodium Metabisulfite (SMBS) Dosing</h3>
+            <p>
+              In industrial facilities, precision metering of Sodium Metabisulfite (Na<sub>2</sub>S<sub>2</sub>O<sub>5</sub>) is the industry benchmark:
+            </p>
+            <div class="callout" style="border-left-color: var(--mid-blue); background: var(--pale)">
+              <h4>Dechlorination Stoichiometry</h4>
+              <p style="margin: 0; font-family: var(--mono); font-size: 0.95rem">
+                Na<sub>2</sub>S<sub>2</sub>O<sub>5</sub> + H<sub>2</sub>O &rarr; 2 NaHSO<sub>3</sub>
+                <br />
+                2 NaHSO<sub>3</sub> + 2 Cl<sub>2</sub> + 2 H<sub>2</sub>O &rarr; Na<sub>2</sub>SO<sub>4</sub> + 4 HCl + H<sub>2</sub>SO<sub>4</sub>
+              </p>
+              <p style="margin: 0.5rem 0 0; font-size: 0.9rem">
+                Stoichiometrically, 1.34 mg of SMBS neutralizes 1.0 mg of free chlorine. In practice, engineers dose 1.8 to 2.0 mg per mg of chlorine to maintain a safe 100% stoichiometric excess.
+              </p>
+            </div>
+
+            <h2>Advanced Pre-Treatment: Ultrafiltration (UF) Membranes</h2>
+            <p>
+              For surface water intakes (rivers, reservoirs, open lagoons) where raw water turbidity spikes erratically during rainy seasons, conventional media filters frequently experience breakthrough, causing catastrophic RO fouling.
+            </p>
+            <p>
+              Tovila engineers recommend hollow-fiber <strong>Ultrafiltration (UF) membranes</strong> (0.02 micron pore size) as direct pretreatment. Pressurized or submerged UF modules act as an absolute physical barrier against suspended silt, colloidal silica, bacteria, and cysts &mdash; consistently delivering feed water with an <strong>SDI<sub>15</sub> &lt; 1.5 and turbidity &lt; 0.05 NTU</strong> regardless of raw river turbidity.
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Related Section -->
+      <section class="section pale">
+        <div class="wrap">
+          <span class="eyebrow" style="color: var(--deep-blue)">Process Infrastructure</span>
+          <h2>Related Industrial Technologies</h2>
+          <div class="grid g2" style="margin-top: 1.6rem">
+            <div class="card pad-l a-industrial">
+              <span class="accent-bar" style="background: var(--deep-blue)"></span>
+              <span class="mono" style="color: var(--deep-blue); display: block; margin-bottom: 0.4rem">Demineralization</span>
+              <h3>Industrial Demineralization Plants</h3>
+              <p>
+                Two-bed ion exchange demineralizers, mixed bed polishers, and electro-deionization (EDI) for power station boilers and pharmaceutical water.
+              </p>
+              <a class="more" href="industrial-demineralization.html" style="color: var(--deep-blue)">Explore Demineralizers &rarr;</a>
+            </div>
+            <div class="card pad-l a-industrial">
+              <span class="accent-bar" style="background: var(--deep-blue)"></span>
+              <span class="mono" style="color: var(--deep-blue); display: block; margin-bottom: 0.4rem">Physical Chemistry</span>
+              <h3>Membrane Scaling Chemistry: Prediction &amp; Control</h3>
+              <p>
+                Deep dive into LSI, S&amp;DSI, sulfate precipitation thresholds, silica solubility, and threshold antiscalant polymer mechanics.
+              </p>
+              <a class="more" href="kb-eng-membrane-scaling.html" style="color: var(--deep-blue)">Read Scaling Chemistry &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <svg
+        class="wave"
+        viewBox="0 0 1440 80"
+        preserveAspectRatio="none"
+        aria-hidden="true"
+        focusable="false"
+      >
+        <path
+          d="M0,40 C240,90 480,-10 720,30 C960,70 1200,10 1440,45 L1440,80 L0,80 Z"
+          fill="#081226"
+        />
+      </svg>
+      <section class="section dark">
+        <div class="wrap center">
+          <span class="eyebrow on-dark">Heavy Process Engineering</span>
+          <h2>Protect Your Industrial Membrane Assets</h2>
+          <p class="lead" style="max-width: 60ch; margin: 0 auto 1.4rem">
+            Consult with Tovila&rsquo;s industrial water specialists to audit your pre-treatment train, resolve high SDI, eliminate iron fouling, and optimize chemical dosing.
+          </p>
+          <div class="btn-row" style="justify-content: center">
+            <a class="btn" href="contact.html?subject=Pretreatment%20Engineering%20Audit"><span>Schedule Pre-Treatment Audit</span></a>
+            <a class="btn ghost on-dark" href="industrial.html"><span>Explore Industrial Systems</span></a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <div class="f-grid">
+          <div>
+            <a class="logo" href="index.html" aria-label="Tovila Water Solutions home">
+              <img src="img/tovila-logo.jpg" alt="Tovila Water Solutions" class="logo-img" />
+            </a>
+            <p style="margin-top: 1rem; max-width: 34ch">
+              Complete water treatment, purification and water engineering solutions &mdash; engineered
+              around your source, application and budget.
+            </p>
+            <div class="socials">
+              <a href="#" aria-label="Tovila on LinkedIn">In</a>
+              <a href="#" aria-label="Tovila on Facebook">Fb</a>
+              <a href="#" aria-label="Tovila on Instagram">Ig</a>
+              <a href="#" aria-label="Tovila on X">X</a>
+            </div>
+            <p class="f-contact">
+              Tetegu Road, Tetegu, Accra, Ghana<br />
+              <a href="tel:+233552490684">+233 (0)55 249 0684</a><br />
+              <a href="mailto:info@tovilawatersolutions.com">info@tovilawatersolutions.com</a><br />
+              Mon&ndash;Fri 8am&ndash;6pm, Sat 9am&ndash;1pm
+            </p>
+          </div>
+          <div>
+            <h4>Solutions</h4>
+            <ul>
+              <li><a href="residential.html">Residential</a></li>
+              <li><a href="commercial.html">Commercial</a></li>
+              <li><a href="industrial.html">Industrial &amp; Institutional</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="projects.html">Projects</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Learn &amp; Company</h4>
+            <ul>
+              <li><a href="training.html">Training Academy</a></li>
+              <li><a href="knowledge-centre.html" aria-current="page">Knowledge Centre</a></li>
+              <li><a href="about.html">About Tovila</a></li>
+              <li><a href="csr.html">Community Impact</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Water notes newsletter</h4>
+            <p>
+              Practical water engineering notes for homes, businesses and plant operators. Monthly,
+              no sales noise.
+            </p>
+            <form class="news" data-simple>
+              <label class="microcopy" for="news-email" style="position: absolute; left: -9999px"
+                >Email address</label
+              >
+              <input id="news-email" type="email" placeholder="you@company.com" required />
+              <button class="btn sm" type="submit"><span>Join</span></button>
+            </form>
+            <p class="form-success">
+              Thanks &mdash; you are on the list. (Front-end only in Phase 1.)
+            </p>
+          </div>
+        </div>
+        <div class="f-bottom">
+          <span>&copy; 2026 Tovila Water Solutions</span>
+          <span>Accra, Ghana &middot; Engineering better water</span>
+        </div>
+      </div>
+    </footer>
+    <script src="js/main.js"></script>
+    <script src="js/water.js" defer></script>
+  </body>
+</html>
