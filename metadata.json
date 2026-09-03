@@ -1,0 +1,6 @@
+{
+  "name": "Tovila Water Solutions",
+  "description": "Water treatment, purification and water engineering solutions for residential, commercial, industrial, and institutional applications in Ghana.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

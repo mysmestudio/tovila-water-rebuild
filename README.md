@@ -18,19 +18,19 @@ a framework despite this instruction.
 DESIGN SYSTEM
 ═══════════════════════════════════════════════════════════
 Colors:
-  --ink:#081226  --ink-2:#05090f  --deep-blue:#0e3a5f  --mid-blue:#175a83
-  --brand-red:#9c2236  --red-2:#7c1a2a  --red-bright:#c73a4c
-  --pale:#f2f3ee  --paper:#faf9f5  --mist:#6e859c  --line-light:rgba(8,18,38,0.12)
-  --home-tint:#4f9fc9 (Residential accent — light tint of the core blue)
+--ink:#081226 --ink-2:#05090f --deep-blue:#0e3a5f --mid-blue:#175a83
+--brand-red:#9c2236 --red-2:#7c1a2a --red-bright:#c73a4c
+--pale:#f2f3ee --paper:#faf9f5 --mist:#6e859c --line-light:rgba(8,18,38,0.12)
+--home-tint:#4f9fc9 (Residential accent — light tint of the core blue)
 Pillar color mapping — no new hues, just different weights of the same two brand colors:
-  Residential = --home-tint · Commercial = --mid-blue · Industrial & Institutional =
-  --deep-blue · Training = --brand-red / --red-bright
+Residential = --home-tint · Commercial = --mid-blue · Industrial & Institutional =
+--deep-blue · Training = --brand-red / --red-bright
 Fonts: 'Fraunces' (display headlines, 600-700), 'Archivo' (body/UI), 'IBM Plex Mono'
 (eyebrows, labels, stats, form microcopy, uppercase, letter-spacing .12em)
 Motion (respect prefers-reduced-motion — disable all of it, show final states instantly):
-  scroll-progress bar top of viewport filling in --red-bright, SVG wave dividers between
-  sections, liquid button hover (radial clip-path fill), droplet card hover reveal,
-  staggered scroll reveals via IntersectionObserver
+scroll-progress bar top of viewport filling in --red-bright, SVG wave dividers between
+sections, liquid button hover (radial clip-path fill), droplet card hover reveal,
+staggered scroll reveals via IntersectionObserver
 
 ═══════════════════════════════════════════════════════════
 CONVERSION PSYCHOLOGY — GLOBAL RULES
@@ -86,6 +86,7 @@ Newsletter signup. Contact details (exact): Tetegu Road, Tetegu, Accra, Ghana ·
 ═══════════════════════════════════════════════════════════
 PAGE 1 — HOME (index.html)
 ═══════════════════════════════════════════════════════════
+
 1. Hero: H1 "Engineering Better Water for Homes, Businesses & Industry." Subhead:
    "Complete water treatment, purification and water engineering solutions designed
    around your water source, application and budget." Primary CTA "Request a Water
@@ -115,6 +116,7 @@ PAGE 1 — HOME (index.html)
 ═══════════════════════════════════════════════════════════
 PAGE 2 — RESIDENTIAL (residential.html)
 ═══════════════════════════════════════════════════════════
+
 1. Banner (--home-tint accent gradient): H1 "Better Water Starts at Home." Explain
    water source variability first (borehole / municipal / tank / mixed) before any
    product talk.
@@ -147,6 +149,7 @@ PAGE 2 — RESIDENTIAL (residential.html)
 ═══════════════════════════════════════════════════════════
 PAGE 3 — COMMERCIAL (commercial.html)
 ═══════════════════════════════════════════════════════════
+
 1. Banner (--mid-blue accent): H1 "Water Solutions That Keep Your Business Running."
    Copy angle: reliability, consistency, cost control, equipment protection,
    operational continuity — not just "clean water."
@@ -168,6 +171,7 @@ PAGE 3 — COMMERCIAL (commercial.html)
 ═══════════════════════════════════════════════════════════
 PAGE 4 — INDUSTRIAL & INSTITUTIONAL (industrial.html)
 ═══════════════════════════════════════════════════════════
+
 1. Banner (--deep-blue accent): H1 "Engineered Water for Complex Applications." Keep
    tone technical/credible — this audience wants engineering depth, not warmth.
 2. Services grid: Industrial RO, Water Treatment Plants, Process Water, Wastewater,
@@ -193,6 +197,7 @@ pattern as elsewhere on the site.
 ═══════════════════════════════════════════════════════════
 PAGE 6 — TRAINING (training.html) — Tovila Water Engineering Academy
 ═══════════════════════════════════════════════════════════
+
 1. Banner (--brand-red accent): "Tovila Water Engineering Academy — Learn. Practise.
    Engineer."
 2. RECIPROCITY: "Watch Lesson 1 Free" — an embedded/placeholder intro video block
@@ -243,6 +248,7 @@ pre-selects "Training Enquiry"), otherwise defaults to "General Enquiry" — nev
 ═══════════════════════════════════════════════════════════
 FINAL REQUIREMENTS
 ═══════════════════════════════════════════════════════════
+
 - Fully responsive, nav collapses to hamburger under 900px, grids collapse to 1-2
   columns under 768px
 - Keyboard-accessible, visible focus rings in --red-bright
