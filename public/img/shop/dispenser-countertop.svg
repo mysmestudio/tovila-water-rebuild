@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e1b4b"/>
+      <stop offset="100%" stop-color="#312e81"/>
+    </linearGradient>
+  </defs>
+  <rect width="300" height="300" rx="16" fill="url(#bg)"/>
+  <rect x="95" y="70" width="110" height="160" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
+  <rect x="110" y="95" width="80" height="75" rx="4" fill="#0f172a"/>
+  <!-- taps -->
+  <rect x="125" y="105" width="12" height="20" rx="2" fill="#ef4444"/>
+  <rect x="163" y="105" width="12" height="20" rx="2" fill="#3b82f6"/>
+  <rect x="105" y="195" width="90" height="15" rx="3" fill="#e2e8f0"/>
+  <text x="150" y="222" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#64748b" text-anchor="middle">COUNTERTOP HOT &amp; COLD</text>
+</svg>

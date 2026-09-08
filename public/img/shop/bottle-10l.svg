@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="w10" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+  </defs>
+  <rect width="300" height="300" rx="16" fill="url(#bg)"/>
+  <rect x="136" y="60" width="28" height="20" rx="3" fill="#e2e8f0"/>
+  <path d="M 125 95 C 125 85, 175 85, 175 95 L 195 125 C 205 138, 205 150, 205 160 L 205 230 C 205 240, 195 245, 185 245 L 115 245 C 105 245, 95 240, 95 230 L 95 160 C 95 150, 95 138, 105 125 Z" fill="url(#w10)" opacity="0.9"/>
+  <rect x="115" y="150" width="70" height="36" rx="4" fill="#ffffff" opacity="0.95"/>
+  <text x="150" y="166" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#0f172a" text-anchor="middle">TOVILA</text>
+  <text x="150" y="178" font-family="system-ui, sans-serif" font-size="8" fill="#0284c7" text-anchor="middle">10L BOTTLE</text>
+</svg>
