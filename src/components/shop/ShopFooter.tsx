@@ -8,54 +8,50 @@ export function ShopFooter() {
       className="bg-[#0a2540] text-slate-300 mt-16 border-t border-slate-800"
     >
       {/* Guarantees / Value props */}
-      <div className="border-b border-slate-800/80 py-8 px-4 sm:px-6">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-6 text-center sm:text-left">
+      <div className="border-b border-slate-800/80 py-10 px-4 sm:px-8">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-8 text-center sm:text-left">
           <div className="flex items-center gap-4 justify-center sm:justify-start">
-            <div className="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-[#00bcd4] shrink-0">
+            <div className="w-12 h-12 rounded-xl bg-slate-800/90 border border-slate-700/80 flex items-center justify-center text-cyan-400 shrink-0">
               <ShieldCheck className="w-6 h-6" />
             </div>
             <div>
               <h4 className="text-white font-semibold text-sm">Certified Water Quality</h4>
-              <p className="text-xs text-slate-400 mt-0.5">
-                FDA Ghana &amp; GSA certified standards
-              </p>
+              <p className="text-xs text-slate-400 mt-1">FDA Ghana &amp; GSA certified standards</p>
             </div>
           </div>
 
           <div className="flex items-center gap-4 justify-center sm:justify-start">
-            <div className="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-[#00bcd4] shrink-0">
+            <div className="w-12 h-12 rounded-xl bg-slate-800/90 border border-slate-700/80 flex items-center justify-center text-cyan-400 shrink-0">
               <Truck className="w-6 h-6" />
             </div>
             <div>
               <h4 className="text-white font-semibold text-sm">Accra &amp; Tema Delivery</h4>
-              <p className="text-xs text-slate-400 mt-0.5">
+              <p className="text-xs text-slate-400 mt-1">
                 Scheduled refills &amp; engineering site visits
               </p>
             </div>
           </div>
 
           <div className="flex items-center gap-4 justify-center sm:justify-start">
-            <div className="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-[#00bcd4] shrink-0">
+            <div className="w-12 h-12 rounded-xl bg-slate-800/90 border border-slate-700/80 flex items-center justify-center text-cyan-400 shrink-0">
               <Clock className="w-6 h-6" />
             </div>
             <div>
               <h4 className="text-white font-semibold text-sm">Professional Engineers</h4>
-              <p className="text-xs text-slate-400 mt-0.5">
-                Borehole &amp; RO turnkey commissioning
-              </p>
+              <p className="text-xs text-slate-400 mt-1">Borehole &amp; RO turnkey commissioning</p>
             </div>
           </div>
         </div>
       </div>
 
       {/* Main footer info */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12 grid grid-cols-1 md:grid-cols-4 gap-8">
-        <div className="space-y-3">
-          <div className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded bg-cyan-500 flex items-center justify-center text-[#0a2540] font-black text-sm">
+      <div className="max-w-7xl mx-auto px-4 sm:px-8 py-16 grid grid-cols-1 md:grid-cols-4 gap-10">
+        <div className="space-y-4">
+          <div className="flex items-center gap-3">
+            <div className="w-8 h-8 rounded-lg bg-cyan-500 flex items-center justify-center text-[#0a2540] font-bold text-sm">
               TV
             </div>
-            <span className="font-extrabold text-lg text-white tracking-tight">TOVILA</span>
+            <span className="font-bold text-lg text-white tracking-tight">TOVILA</span>
           </div>
           <p className="text-xs text-slate-400 leading-relaxed">
             Tovila Water Solutions is a premier water engineering and treatment firm in Ghana,
@@ -63,7 +59,7 @@ export function ShopFooter() {
             professional borehole drilling.
           </p>
           <div className="pt-2">
-            <span className="inline-block text-[11px] bg-slate-800 text-cyan-300 font-mono px-2.5 py-1 rounded border border-slate-700">
+            <span className="inline-block text-[11px] bg-slate-800/80 text-cyan-300 font-mono px-3 py-1 rounded-md border border-slate-700/60">
               Secure Payments via Paystack GHS
             </span>
           </div>

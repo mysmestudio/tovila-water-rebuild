@@ -3,27 +3,29 @@
    Plain CSS. No framework, no build step.
    =========================================================== */
 
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
 :root {
-  --ink: #081226;
-  --ink-2: #05090f;
+  --ink: #0f172a; /* Slate 900 soft dark neutral */
+  --ink-2: #1e293b; /* Slate 800 */
   --deep-blue: #0e3a5f;
   --mid-blue: #175a83;
   --brand-red: #9c2236;
   --red-2: #7c1a2a;
   --red-bright: #c73a4c;
-  --pale: #f4f8fb;
+  --pale: #f8fafc; /* Slate 50 */
   --paper: #ffffff;
-  --mist: #6e859c;
-  --line-light: rgba(8, 18, 38, 0.12);
+  --mist: #64748b; /* Slate 500 */
+  --line-light: rgba(15, 23, 42, 0.08); /* Crisp, low-contrast subtle border */
   --home-tint: #4f9fc9;
 
-  --display: "Fraunces", Georgia, serif;
-  --body: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --display: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --mono: "IBM Plex Mono", ui-monospace, monospace;
 
   --max: 1200px;
-  --pad: clamp(1.1rem, 4vw, 2.5rem);
-  --r: 14px;
+  --pad: clamp(1.25rem, 4vw, 2.75rem);
+  --r: 12px;
   --waveh: clamp(38px, 5vw, 70px);
 }
 
@@ -38,8 +40,9 @@ body {
   background: var(--paper);
   color: var(--ink);
   font-family: var(--body);
-  font-size: 17px;
-  line-height: 1.6;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
 img,
@@ -57,9 +60,10 @@ h3,
 h4 {
   font-family: var(--display);
   font-weight: 700;
-  line-height: 1.08;
+  line-height: 1.2;
   margin: 0 0 0.6em;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.015em;
+  color: var(--ink);
 }
 h1 {
   font-size: clamp(2.3rem, 5.4vw, 4.1rem);

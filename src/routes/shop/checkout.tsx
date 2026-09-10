@@ -135,32 +135,32 @@ function CheckoutPage() {
     <div className="min-h-screen flex flex-col bg-slate-50">
       <ShopHeader />
 
-      <main className="flex-1 max-w-7xl mx-auto px-4 sm:px-6 py-10 w-full">
-        <div className="mb-6 flex items-center justify-between">
+      <main className="flex-1 max-w-7xl mx-auto px-4 sm:px-8 py-12 w-full">
+        <div className="mb-8 flex items-center justify-between">
           <div>
             <Link
               to="/shop/cart"
-              className="inline-flex items-center gap-1 text-xs text-slate-500 hover:text-slate-900 font-medium mb-2 transition"
+              className="inline-flex items-center gap-1.5 text-xs text-slate-500 hover:text-slate-900 font-medium mb-2.5 transition"
             >
               <ArrowLeft className="w-3.5 h-3.5" /> Back to Cart
             </Link>
-            <h1 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
+            <h1 className="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight">
               Checkout &amp; Payment
             </h1>
-            <p className="text-xs sm:text-sm text-slate-500 mt-1">
+            <p className="text-xs sm:text-sm text-slate-500 mt-1.5">
               Accra deliveries &bull; Turnkey engineering &bull; Paystack Ghana Mobile Money &amp;
               Card
             </p>
           </div>
 
-          <div className="hidden sm:flex items-center gap-2 bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs px-3 py-1.5 rounded-lg font-medium">
+          <div className="hidden sm:flex items-center gap-2 bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs px-3.5 py-2 rounded-xl font-medium">
             <Lock className="w-3.5 h-3.5 text-emerald-600" />
             256-bit Encrypted Checkout
           </div>
         </div>
 
         {errorMessage && (
-          <div className="mb-6 p-4 bg-red-50 text-red-700 rounded-xl border border-red-200 flex items-start gap-2.5 text-xs font-semibold">
+          <div className="mb-8 p-5 bg-red-50 text-red-700 rounded-2xl border border-red-200 flex items-start gap-3 text-xs font-medium">
             <AlertCircle className="w-4 h-4 text-red-600 shrink-0 mt-0.5" />
             <span>{errorMessage}</span>
           </div>
@@ -170,15 +170,15 @@ function CheckoutPage() {
           {/* Customer Details & Logistics */}
           <div className="lg:col-span-2 space-y-6">
             {/* Section 1: Customer Contact */}
-            <div className="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm">
-              <h2 className="text-base font-extrabold text-slate-900 mb-4 pb-3 border-b border-slate-100 flex items-center gap-2">
+            <div className="bg-white rounded-2xl border border-slate-200/90 p-8">
+              <h2 className="text-base font-bold text-slate-900 mb-5 pb-4 border-b border-slate-100 flex items-center gap-2.5">
                 <User className="w-4 h-4 text-[#0288d1]" />
                 1. Customer Information
               </h2>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                 <div className="sm:col-span-2">
-                  <label className="block text-xs font-bold text-slate-700 mb-1">
+                  <label className="block text-xs font-semibold text-slate-700 mb-1.5">
                     Full Name / Corporate Entity <span className="text-red-600">*</span>
                   </label>
                   <input
@@ -187,46 +187,46 @@ function CheckoutPage() {
                     placeholder="e.g. Kwame Mensah / Apex Logistics Ltd"
                     value={fullName}
                     onChange={(e) => setFullName(e.target.value)}
-                    className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-lg text-xs text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#00bcd4] focus:bg-white"
+                    className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-xs text-slate-800 focus:outline-none focus:ring-2 focus:ring-[#00bcd4] focus:bg-white transition"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-xs font-bold text-slate-700 mb-1">
+                  <label className="block text-xs font-semibold text-slate-700 mb-1.5">
                     Email Address <span className="text-red-600">*</span>
                   </label>
                   <div className="relative">
-                    <Mail className="w-4 h-4 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2" />
+                    <Mail className="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
                     <input
                       type="email"
                       required
                       placeholder="kwame@example.com"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
-                      className="w-full pl-9 pr-3 py-2.5 bg-slate-50 border border-slate-200 rounded-lg text-xs text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#00bcd4] focus:bg-white"
+                      className="w-full pl-10 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-xs text-slate-800 focus:outline-none focus:ring-2 focus:ring-[#00bcd4] focus:bg-white transition"
                     />
                   </div>
-                  <span className="text-[10px] text-slate-400 mt-1 block">
+                  <span className="text-xs text-slate-400 mt-1.5 block">
                     Paystack receipts and order numbers are sent here.
                   </span>
                 </div>
 
                 <div>
-                  <label className="block text-xs font-bold text-slate-700 mb-1">
+                  <label className="block text-xs font-semibold text-slate-700 mb-1.5">
                     Phone Number (MoMo / WhatsApp) <span className="text-red-600">*</span>
                   </label>
                   <div className="relative">
-                    <Phone className="w-4 h-4 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2" />
+                    <Phone className="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
                     <input
                       type="tel"
                       required
                       placeholder="024 123 4567 or +233 24 123 4567"
                       value={phone}
                       onChange={(e) => setPhone(e.target.value)}
-                      className="w-full pl-9 pr-3 py-2.5 bg-slate-50 border border-slate-200 rounded-lg text-xs text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#00bcd4] focus:bg-white"
+                      className="w-full pl-10 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-xs text-slate-800 focus:outline-none focus:ring-2 focus:ring-[#00bcd4] focus:bg-white transition"
                     />
                   </div>
-                  <span className="text-[10px] text-slate-400 mt-1 block">
+                  <span className="text-xs text-slate-400 mt-1.5 block">
                     For driver delivery coordination or engineering dispatch.
                   </span>
                 </div>
@@ -234,16 +234,16 @@ function CheckoutPage() {
             </div>
 
             {/* Section 2: Delivery & Site Logistics */}
-            <div className="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm">
-              <h2 className="text-base font-extrabold text-slate-900 mb-4 pb-3 border-b border-slate-100 flex items-center gap-2">
+            <div className="bg-white rounded-2xl border border-slate-200/90 p-8">
+              <h2 className="text-base font-bold text-slate-900 mb-5 pb-4 border-b border-slate-100 flex items-center gap-2.5">
                 <MapPin className="w-4 h-4 text-[#0288d1]" />
                 2. Location &amp; Scheduling
               </h2>
 
-              <div className="space-y-4">
+              <div className="space-y-5">
                 {totals.hasProducts && (
                   <div>
-                    <label className="block text-xs font-bold text-slate-700 mb-1">
+                    <label className="block text-xs font-semibold text-slate-700 mb-1.5">
                       Delivery Address (Drinking Water / Dispensers / Parts){" "}
                       <span className="text-red-600">*</span>
                     </label>
@@ -252,14 +252,14 @@ function CheckoutPage() {
                       placeholder="House / Street / Area (e.g. House 14, Boundary Rd, East Legon, Accra)"
                       value={deliveryAddress}
                       onChange={(e) => setDeliveryAddress(e.target.value)}
-                      className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-lg text-xs text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#00bcd4] focus:bg-white"
+                      className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-xs text-slate-800 focus:outline-none focus:ring-2 focus:ring-[#00bcd4] focus:bg-white transition"
                     />
                   </div>
                 )}
 
                 {totals.hasServices && (
                   <div>
-                    <label className="block text-xs font-bold text-slate-700 mb-1">
+                    <label className="block text-xs font-semibold text-slate-700 mb-1.5">
                       Project Site Location (Borehole Drilling / System Installation){" "}
                       <span className="text-red-600">*</span>
                     </label>
@@ -268,33 +268,33 @@ function CheckoutPage() {
                       placeholder="Site Coordinates, Town / Landmark (e.g. Oyibi near Valley View University, or Tema Comm 25)"
                       value={siteAddress}
                       onChange={(e) => setSiteAddress(e.target.value)}
-                      className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-lg text-xs text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#00bcd4] focus:bg-white"
+                      className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-xs text-slate-800 focus:outline-none focus:ring-2 focus:ring-[#00bcd4] focus:bg-white transition"
                     />
-                    <span className="text-[10px] text-slate-400 mt-1 block">
+                    <span className="text-xs text-slate-400 mt-1.5 block">
                       Our hydro-geological surveying team will review access for drilling rigs.
                     </span>
                   </div>
                 )}
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <div>
-                    <label className="block text-xs font-bold text-slate-700 mb-1">
+                    <label className="block text-xs font-semibold text-slate-700 mb-1.5">
                       Preferred Date (Delivery or Site Visit)
                     </label>
                     <div className="relative">
-                      <Calendar className="w-4 h-4 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2" />
+                      <Calendar className="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
                       <input
                         type="date"
                         min={new Date().toISOString().split("T")[0]}
                         value={preferredDate}
                         onChange={(e) => setPreferredDate(e.target.value)}
-                        className="w-full pl-9 pr-3 py-2.5 bg-slate-50 border border-slate-200 rounded-lg text-xs text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#00bcd4] focus:bg-white"
+                        className="w-full pl-10 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-xs text-slate-800 focus:outline-none focus:ring-2 focus:ring-[#00bcd4] focus:bg-white transition"
                       />
                     </div>
                   </div>
 
                   <div>
-                    <label className="block text-xs font-bold text-slate-700 mb-1">
+                    <label className="block text-xs font-semibold text-slate-700 mb-1.5">
                       Special Delivery / Site Notes
                     </label>
                     <input
@@ -302,7 +302,7 @@ function CheckoutPage() {
                       placeholder="e.g. Gate code, call before arrival, high water tank"
                       value={notes}
                       onChange={(e) => setNotes(e.target.value)}
-                      className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-lg text-xs text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#00bcd4] focus:bg-white"
+                      className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-xs text-slate-800 focus:outline-none focus:ring-2 focus:ring-[#00bcd4] focus:bg-white transition"
                     />
                   </div>
                 </div>
@@ -310,27 +310,27 @@ function CheckoutPage() {
             </div>
 
             {/* Section 3: Payment Method Info */}
-            <div className="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm">
-              <h2 className="text-base font-extrabold text-slate-900 mb-3 flex items-center gap-2">
+            <div className="bg-white rounded-2xl border border-slate-200/90 p-8">
+              <h2 className="text-base font-bold text-slate-900 mb-3 flex items-center gap-2.5">
                 <ShieldCheck className="w-4 h-4 text-[#0288d1]" />
                 3. Secure Payment with Paystack
               </h2>
-              <p className="text-xs text-slate-600 mb-4 leading-relaxed">
+              <p className="text-xs text-slate-600 mb-5 leading-relaxed">
                 Clicking <strong>"Complete Order &amp; Pay"</strong> will initiate your secure
                 Paystack transaction. You can pay with your preferred local payment channel:
               </p>
 
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center">
-                <div className="p-3 bg-slate-50 rounded-xl border border-slate-200 text-xs font-semibold text-slate-800">
+                <div className="p-3.5 bg-slate-50 rounded-xl border border-slate-200/80 text-xs font-semibold text-slate-700">
                   MTN Mobile Money
                 </div>
-                <div className="p-3 bg-slate-50 rounded-xl border border-slate-200 text-xs font-semibold text-slate-800">
+                <div className="p-3.5 bg-slate-50 rounded-xl border border-slate-200/80 text-xs font-semibold text-slate-700">
                   Telecel Cash
                 </div>
-                <div className="p-3 bg-slate-50 rounded-xl border border-slate-200 text-xs font-semibold text-slate-800">
+                <div className="p-3.5 bg-slate-50 rounded-xl border border-slate-200/80 text-xs font-semibold text-slate-700">
                   AT Money
                 </div>
-                <div className="p-3 bg-slate-50 rounded-xl border border-slate-200 text-xs font-semibold text-slate-800">
+                <div className="p-3.5 bg-slate-50 rounded-xl border border-slate-200/80 text-xs font-semibold text-slate-700">
                   Visa &bull; Mastercard
                 </div>
               </div>
@@ -339,27 +339,27 @@ function CheckoutPage() {
 
           {/* Sidebar Order Summary */}
           <div>
-            <div className="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm sticky top-20">
-              <h3 className="font-extrabold text-slate-900 text-base mb-4 pb-3 border-b border-slate-100">
+            <div className="bg-white rounded-2xl border border-slate-200/90 p-8 sticky top-24">
+              <h3 className="font-bold text-slate-900 text-base mb-5 pb-4 border-b border-slate-100">
                 Order Summary ({totals.totalCount} items)
               </h3>
 
-              <div className="space-y-3 max-h-60 overflow-y-auto pr-1">
+              <div className="space-y-3.5 max-h-60 overflow-y-auto pr-1">
                 {items.map((it) => (
                   <div
                     key={`${it.item_type}-${it.id}`}
-                    className="flex justify-between text-xs gap-2"
+                    className="flex justify-between text-xs gap-3"
                   >
                     <div>
-                      <span className="font-semibold text-slate-800 block leading-tight">
+                      <span className="font-semibold text-slate-800 block leading-snug">
                         {it.name}
                       </span>
-                      <span className="text-[11px] text-slate-400">
+                      <span className="text-xs text-slate-400 mt-0.5 block">
                         Qty: {it.quantity} &bull;{" "}
                         {it.item_type === "service" ? "Service Booking" : "Product"}
                       </span>
                     </div>
-                    <span className="font-bold text-slate-700 shrink-0">
+                    <span className="font-semibold text-slate-700 shrink-0">
                       GHS{" "}
                       {(
                         (it.item_type === "service" ? (it.deposit_amount ?? it.price) : it.price) *
@@ -370,7 +370,7 @@ function CheckoutPage() {
                 ))}
               </div>
 
-              <div className="mt-5 pt-4 border-t border-slate-200 space-y-2 text-xs">
+              <div className="mt-6 pt-5 border-t border-slate-200 space-y-2.5 text-xs">
                 <div className="flex justify-between text-slate-600">
                   <span>Full Order Value</span>
                   <span className="font-semibold">GHS {totals.subtotal.toFixed(2)}</span>
@@ -379,17 +379,17 @@ function CheckoutPage() {
                 {totals.subtotal > totals.depositDue && (
                   <div className="flex justify-between text-amber-700">
                     <span>Balance Due Upon Completion</span>
-                    <span className="font-bold">
+                    <span className="font-semibold">
                       GHS {(totals.subtotal - totals.depositDue).toFixed(2)}
                     </span>
                   </div>
                 )}
 
-                <div className="pt-3 border-t border-slate-100 flex items-baseline justify-between">
-                  <span className="text-xs font-black uppercase tracking-wider text-slate-700">
+                <div className="pt-4 border-t border-slate-100 flex items-baseline justify-between">
+                  <span className="text-xs font-semibold uppercase tracking-wider text-slate-600">
                     Total Due Today
                   </span>
-                  <span className="text-2xl font-black text-[#0a2540]">
+                  <span className="text-2xl font-bold text-[#0a2540]">
                     GHS {totals.depositDue.toFixed(2)}
                   </span>
                 </div>
@@ -399,7 +399,7 @@ function CheckoutPage() {
                 type="submit"
                 id="submit-order-button"
                 disabled={submitting}
-                className={`mt-6 w-full py-3.5 px-4 rounded-xl text-xs sm:text-sm font-bold shadow-md transition flex items-center justify-center gap-2 text-white ${
+                className={`mt-8 w-full py-4 px-5 rounded-xl text-sm font-semibold transition flex items-center justify-center gap-2 text-white ${
                   submitting ? "bg-slate-400 cursor-not-allowed" : "bg-[#0a2540] hover:bg-[#184b7a]"
                 }`}
               >
@@ -416,7 +416,7 @@ function CheckoutPage() {
                 )}
               </button>
 
-              <p className="text-[11px] text-slate-400 text-center mt-3 leading-tight">
+              <p className="text-xs text-slate-400 text-center mt-4 leading-relaxed">
                 By completing your order, you agree to Tovila Water Solutions terms of supply &amp;
                 engineering site dispatch.
               </p>

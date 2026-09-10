@@ -19,7 +19,10 @@ export function ShopHeader() {
   const totals = getCartTotals(cart);
 
   return (
-    <header id="shop-header" className="w-full bg-white border-b border-slate-200">
+    <header
+      id="shop-header"
+      className="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm transition-all"
+    >
       <DemoCatalogBanner />
 
       {/* Top info bar */}
@@ -64,26 +67,26 @@ export function ShopHeader() {
       </div>
 
       {/* Main navigation */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3.5 flex items-center justify-between gap-4">
+      <div className="max-w-7xl mx-auto px-4 sm:px-8 py-4 flex items-center justify-between gap-4">
         <div className="flex items-center gap-3">
           <button
             type="button"
-            className="md:hidden p-2 rounded-lg text-slate-700 hover:bg-slate-100"
+            className="md:hidden p-2 rounded-lg text-slate-700 hover:bg-slate-100 transition"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle navigation menu"
           >
-            {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </button>
 
-          <Link to="/shop" className="flex items-center gap-2.5">
-            <div className="w-10 h-10 rounded-lg bg-[#0a2540] flex items-center justify-center text-white font-bold text-xl shadow-sm border border-cyan-500/30">
+          <Link to="/shop" className="flex items-center gap-3">
+            <div className="w-10 h-10 rounded-xl bg-[#0a2540] flex items-center justify-center text-white font-bold text-lg border border-slate-700/50">
               <span className="text-[#00bcd4]">T</span>V
             </div>
             <div>
-              <span className="font-extrabold text-xl tracking-tight text-[#0a2540] block leading-none">
+              <span className="font-bold text-lg sm:text-xl tracking-tight text-slate-900 block leading-tight">
                 TOVILA
               </span>
-              <span className="text-[10px] uppercase font-bold tracking-widest text-[#0288d1]">
+              <span className="text-xs uppercase font-medium tracking-wider text-[#0288d1] block">
                 Online Shop &amp; Booking
               </span>
             </div>
@@ -91,13 +94,13 @@ export function ShopHeader() {
         </div>
 
         {/* Desktop category links */}
-        <nav className="hidden md:flex items-center gap-1">
+        <nav className="hidden md:flex items-center gap-1.5">
           <Link
             to="/shop"
-            className={`px-3 py-2 rounded-md text-sm font-medium transition ${
+            className={`px-3.5 py-2 rounded-lg text-sm font-medium transition ${
               location.pathname === "/shop"
-                ? "bg-slate-100 text-[#0a2540] font-semibold"
-                : "text-slate-600 hover:text-[#0a2540] hover:bg-slate-50"
+                ? "bg-slate-100 text-slate-900 font-semibold"
+                : "text-slate-600 hover:text-slate-900 hover:bg-slate-50"
             }`}
           >
             All Catalog
@@ -105,10 +108,10 @@ export function ShopHeader() {
           <Link
             to="/shop/$categorySlug"
             params={{ categorySlug: "dispenser-drinking-water" }}
-            className={`px-3 py-2 rounded-md text-sm font-medium transition ${
+            className={`px-3.5 py-2 rounded-lg text-sm font-medium transition ${
               location.pathname.includes("dispenser-drinking-water")
-                ? "bg-slate-100 text-[#0a2540] font-semibold"
-                : "text-slate-600 hover:text-[#0a2540] hover:bg-slate-50"
+                ? "bg-slate-100 text-slate-900 font-semibold"
+                : "text-slate-600 hover:text-slate-900 hover:bg-slate-50"
             }`}
           >
             Dispenser Water
@@ -116,10 +119,10 @@ export function ShopHeader() {
           <Link
             to="/shop/$categorySlug"
             params={{ categorySlug: "water-treatment" }}
-            className={`px-3 py-2 rounded-md text-sm font-medium transition ${
+            className={`px-3.5 py-2 rounded-lg text-sm font-medium transition ${
               location.pathname.includes("water-treatment")
-                ? "bg-slate-100 text-[#0a2540] font-semibold"
-                : "text-slate-600 hover:text-[#0a2540] hover:bg-slate-50"
+                ? "bg-slate-100 text-slate-900 font-semibold"
+                : "text-slate-600 hover:text-slate-900 hover:bg-slate-50"
             }`}
           >
             Water Treatment
@@ -127,10 +130,10 @@ export function ShopHeader() {
           <Link
             to="/shop/$categorySlug"
             params={{ categorySlug: "borehole-drilling" }}
-            className={`px-3 py-2 rounded-md text-sm font-medium transition ${
+            className={`px-3.5 py-2 rounded-lg text-sm font-medium transition ${
               location.pathname.includes("borehole-drilling")
-                ? "bg-slate-100 text-[#0a2540] font-semibold"
-                : "text-slate-600 hover:text-[#0a2540] hover:bg-slate-50"
+                ? "bg-slate-100 text-slate-900 font-semibold"
+                : "text-slate-600 hover:text-slate-900 hover:bg-slate-50"
             }`}
           >
             Borehole Drilling
@@ -142,17 +145,17 @@ export function ShopHeader() {
           <Link
             to="/shop/cart"
             id="header-cart-button"
-            className="flex items-center gap-2 bg-[#0a2540] hover:bg-[#184b7a] text-white px-3.5 py-2 rounded-lg text-sm font-medium shadow-sm transition group"
+            className="flex items-center gap-2.5 bg-[#0a2540] hover:bg-[#184b7a] text-white px-4 py-2 rounded-xl text-sm font-medium transition group"
           >
             <div className="relative">
-              <ShoppingBag className="w-4 h-4 text-cyan-400 group-hover:scale-110 transition" />
+              <ShoppingBag className="w-4 h-4 text-cyan-400 group-hover:scale-105 transition" />
               {totals.totalCount > 0 && (
                 <span className="absolute -top-2 -right-2 bg-[#e53935] text-white text-[10px] font-bold rounded-full w-4 h-4 flex items-center justify-center">
                   {totals.totalCount}
                 </span>
               )}
             </div>
-            <span className="hidden sm:inline">Cart</span>
+            <span className="hidden sm:inline font-medium">Cart</span>
             {totals.depositDue > 0 && (
               <span className="font-semibold text-cyan-300 ml-1 text-xs sm:text-sm">
                 GHS {totals.depositDue.toFixed(2)}
